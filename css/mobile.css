@@ -1,0 +1,59 @@
+@import url("https://use.typekit.net/xtr6tty.css");
+body, h1, h2, h3, h4, h4, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 5px;
+}
+
+body {
+  color: #fff;
+  font-family: odisseia, sans-serif;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.slide {
+  background-color: #111;
+  position: relative;
+  height: 660px;
+  text-align: center;
+}
+
+.slide .menu_burger {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.slide .menu_burger img {
+  height: 34px;
+}
+
+.slide .menu_burger p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.slide .slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.slide .slogan p {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

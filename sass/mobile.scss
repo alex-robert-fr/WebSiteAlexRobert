@@ -1,0 +1,58 @@
+@import url("https://use.typekit.net/xtr6tty.css");
+
+$font_size_very_little : 2rem; // 10px -> Très petite
+$font_size_little : 2.4rem; // 12px -> Petite
+$font_size_medium : 4rem; // 20px -> Moyenne
+$font_size_large : 5rem; // 25px -> Grande
+$font_size_very_large : 6rem; // 30px -> Très grande
+
+body,h1,h2,h3,h4,h4,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 5px;
+}
+body{
+    color: #fff;
+    font-family: odisseia, sans-serif;
+}
+h2{
+    font-size: $font_size_large;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.slide{
+    background-color: #111;
+    position: relative;
+    height: 660px;
+    text-align: center;
+    .menu_burger{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        img{
+            height: 34px;
+        }
+        p{
+            margin: 0;
+            font-size: $font_size_very_little;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+    }
+    .slogan{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        p{
+            font-size: $font_size_very_little;
+            font-weight: 300;
+            letter-spacing: 1px;
+
+        }
+    }
+}
