@@ -67,6 +67,7 @@ h2 {
 
 .project {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .project h1 {
@@ -84,6 +85,7 @@ h2 {
 }
 
 .project .card__header {
+  position: relative;
   border-radius: 25px 25px 0 0;
   background-color: #D4D4D4;
   width: 300px;
@@ -134,4 +136,43 @@ h2 {
 
 .project h2 {
   font-weight: 400;
+}
+
+.contact {
+  background-color: #111;
+  height: 900px;
+  color: #fff;
+  padding-top: 32px;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+.contact label {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 13px;
+}
+
+.contact input {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 49px;
+  outline: none;
+}
+
+.contact textarea {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 250px;
+  outline: none;
 }
