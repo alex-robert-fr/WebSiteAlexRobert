@@ -1,0 +1,30 @@
+@media (min-width: 900px) {
+    .skills{
+        &__block{
+            display: flex;
+            align-self: center;
+            transform: rotate(90deg);
+        }
+    }
+    .cards{
+        display: flex;
+    }
+    .contact{
+        form{
+            display: grid;
+            grid-template:  "left right"
+                            "left right"
+                            "msg msg";
+            margin: 0 10%;
+            row-gap: 40px;
+            column-gap: 90px;
+            label{
+                width: 100%;
+                margin: 0 auto;
+            }
+            label[for=message], textarea{
+                grid-area: msg;
+            }
+        }
+    }
+}

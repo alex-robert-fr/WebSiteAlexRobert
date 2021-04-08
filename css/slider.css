@@ -1,0 +1,24 @@
+.arrow {
+  width: 5vmin;
+  height: 5vmin;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.arrow::before {
+  border-radius: 0 10px 0 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  display: block;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}

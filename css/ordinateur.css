@@ -1,0 +1,32 @@
+@media (min-width: 900px) {
+  .skills__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact form {
+    display: -ms-grid;
+    display: grid;
+    grid-template: "left right" "left right" "msg msg";
+    margin: 0 10%;
+    row-gap: 40px;
+    -webkit-column-gap: 90px;
+            column-gap: 90px;
+  }
+  .contact form label {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact form label[for=message], .contact form textarea {
+    grid-area: msg;
+  }
+}

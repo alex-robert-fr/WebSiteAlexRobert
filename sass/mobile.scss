@@ -12,6 +12,40 @@ $font_size_very_large : 6rem; // 30px -> Très grande
     width: 90%;
 }
 
+@mixin stat_bar($color, $percentage, $size: 450px){
+    @if(min-width: 900px){
+        $size: 50vw;
+    }
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    text-transform: uppercase;
+    width: 75px;
+    p{
+        font-size: 3.6rem;
+        @media (min-width: 900px){
+            text-align: right;
+            transform: rotate(-90deg);
+            margin-top: 50px;
+        }
+    }
+    &__bar{
+        position: relative;
+        margin: 0 auto;
+        width: 38px;
+        height: $size;
+        background-color: #222;
+        &::before{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            content: '';
+            width: 100%;
+            height: $percentage;
+            background-color: $color;
+        }
+    }
+}
 body,h1,h2,h3,h4,h4,h6,p{
     margin: 0;
     padding: 0;
@@ -20,7 +54,7 @@ body,h1,h2,h3,h4,h4,h6,p{
 html{
     font-size: 5px;
 }
-body{
+body, input, textarea{
     font-family: odisseia, sans-serif;
 }
 h1{
@@ -34,12 +68,9 @@ h2{
     font-weight: 300;
     letter-spacing: 1px;
 }
-.slide{
+header{
     color: #fff;
     background-color: #111;
-    position: relative;
-    height: 660px;
-    text-align: center;
     .menu_burger{
         position: absolute;
         top: 15px;
@@ -48,25 +79,109 @@ h2{
             height: 34px;
         }
         p{
-            margin: 0;
+            text-align: center;
             font-size: $font_size_very_little;
             font-weight: 300;
             letter-spacing: 1px;
         }
     }
-    .slogan{
+    .navigation-manual{
+        display: block;
+        z-index: 1000;
+        margin: 0 auto;
         position: absolute;
-        top: 50%;
+        top: 600px;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        p{
-            font-size: $font_size_very_little;
-            font-weight: 300;
-            letter-spacing: 1px;
-
+        transform: translateX(-50%);
+    }
+    .manual-btn{
+        z-index: 1000;
+        border: 3px solid #fff;
+        padding: 2px 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+        &:not(:last-child){
+            margin-right: 40px;
+        }
+        &:hover{
+            background-color: #fff;
         }
     }
+}
+.slider{
+    position: relative;
+    height: 660px;
+    text-align: center;
+    input{
+        display: none;
+    }
+    .slides{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        .slide{
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            min-width: 100vw;
+            transition: 1.5s;
+            p{
+                font-size: $font_size_little;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+        }
+        .presentation{
+            text-align: left;
+            margin: 0 auto;
+            max-width: 340px;
+            h2{
+                margin-bottom: 31px;
+            }
+        }
+        .skills{
+            h2{
+                position: absolute;
+                top: 75px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+            &__block{
+                display: flex;
+                align-self: center;
+                .html{
+                    @include stat_bar(#F89D61, 96%);
+                }
+                .css{
+                    @include stat_bar(#64BCFF, 92%);
+                }
+                .php{
+                    @include stat_bar(#6E86FF, 55%);
+                }
+                .sql{
+                    @include stat_bar(#fff, 53%);
+                }
+                .js{
+                    @include stat_bar(#FFE26E, 30%);
+                }
+            }
+        }
+    }
+}
+
+#radio1:checked ~ .slogan{
+    margin-left: 0;
+}
+#radio2:checked ~ .slogan{
+    margin-left: -100vw;
+}
+#radio3:checked ~ .slogan{
+    margin-left: -200vw;
 }
 
 .project{
@@ -132,7 +247,7 @@ h2{
 
 .contact{
     background-color: #111;
-    height: 900px;
+    padding-bottom: 125px;
     color: #fff;
     padding-top: 32px;
     h1{
@@ -149,11 +264,15 @@ h2{
     }
     input{
         @include center_form();
+        font-size: $font_size_large;
+        width: 100%;
         height: 49px;
         outline: none;
     }
     textarea{
         @include center_form();
+        font-size: $font_size_medium;
+        width: 100%;
         height: 250px;
         outline: none;
     }
