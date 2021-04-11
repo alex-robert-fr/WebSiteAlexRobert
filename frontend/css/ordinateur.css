@@ -14,6 +14,7 @@
     display: flex;
   }
   .contact form {
+    position: relative;
     display: -ms-grid;
     display: grid;
     grid-template: "left right" "left right" "msg msg";
@@ -28,5 +29,9 @@
   }
   .contact form label[for=message], .contact form textarea {
     grid-area: msg;
+  }
+  .contact form button {
+    position: absolute;
+    bottom: -60px;
   }
 }

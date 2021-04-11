@@ -8,7 +8,7 @@ html {
   font-size: 5px;
 }
 
-body, input, textarea {
+body, input, textarea, button {
   font-family: odisseia, sans-serif;
 }
 
@@ -30,26 +30,83 @@ header {
   background-color: #111;
 }
 
-header .menu_burger {
+header label[for=menuVisible] {
+  cursor: pointer;
+  z-index: 10000;
   position: absolute;
   top: 15px;
   left: 15px;
 }
 
-header .menu_burger img {
+header label[for=menuVisible] img {
   height: 34px;
 }
 
-header .menu_burger p {
+header label[for=menuVisible] p {
   text-align: center;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-header .navigation-manual {
+header #menuVisible {
+  display: none;
+}
+
+header nav {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: #111;
+}
+
+header nav ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  list-style: none;
+}
+
+header nav ul li {
+  font-size: 4rem;
+  margin: 100px 0;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 10px;
+}
+
+header nav ul li a:hover::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 15px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-radius: 0 4px 0 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header #menuVisible:checked ~ nav {
   display: block;
+}
+
+header #menuVisible:checked ~ .navigation-manual {
+  display: none;
+}
+
+header .navigation-manual {
   z-index: 1000;
+  display: block;
   margin: 0 auto;
   position: absolute;
   top: 600px;
@@ -59,7 +116,7 @@ header .navigation-manual {
 }
 
 header .manual-btn {
-  z-index: 1000;
+  z-index: 100;
   border: 3px solid #fff;
   padding: 2px 5px;
   border-radius: 10px;
@@ -80,6 +137,7 @@ header .manual-btn:hover {
   position: relative;
   height: 660px;
   text-align: center;
+  overflow: hidden;
 }
 
 .slider input {
@@ -163,6 +221,7 @@ header .manual-btn:hover {
 
 .slider .slides .skills__block .html p {
   font-size: 3.6rem;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
@@ -208,6 +267,7 @@ header .manual-btn:hover {
 
 .slider .slides .skills__block .css p {
   font-size: 3.6rem;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
@@ -253,6 +313,7 @@ header .manual-btn:hover {
 
 .slider .slides .skills__block .php p {
   font-size: 3.6rem;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
@@ -298,6 +359,7 @@ header .manual-btn:hover {
 
 .slider .slides .skills__block .sql p {
   font-size: 3.6rem;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
@@ -343,6 +405,7 @@ header .manual-btn:hover {
 
 .slider .slides .skills__block .js p {
   font-size: 3.6rem;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
@@ -498,4 +561,19 @@ header .manual-btn:hover {
   width: 100%;
   height: 250px;
   outline: none;
+}
+
+.contact button {
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
 }

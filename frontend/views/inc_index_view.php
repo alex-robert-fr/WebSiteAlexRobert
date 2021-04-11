@@ -5,26 +5,56 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Alex Robert</title>
-        <link rel="stylesheet" href="css/mobile.css">
-        <link rel="stylesheet" href="css/ordinateur.css">
+        <link rel="stylesheet" href="../frontend/css/mobile.css">
+        <link rel="stylesheet" href="../frontend/css/ordinateur.css">
+        <script defer src="js/script.js"></script>
     </head>
     <body>
         <header>
-            <div class="menu_burger">
-                <img src="./svg/burger.svg" alt="Menu burger">
-                <p>menu</p>
-            </div>
+            <label for="menuVisible" onclick="displayMenu()">
+                <div class="menu_burger">
+                    <img src="../frontend/svg/burger.svg" alt="Menu burger">
+                    <p>menu</p>
+                </div>
+            </label>
+            <input type="checkbox" name="menu" id="menuVisible">
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#slogan" onclick="displayMenu(), removeMenu()">Accueil</a>
+                    </li>
+
+                    <li>
+                        <a href="#presentation" onclick="displayMenu(), removeMenu()">A Propos</a>
+                    </li>
+
+                    <li>
+                        <a href="#skils" onclick="displaySkills(), removeMenu()">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#project" onclick="displayMenu(), removeMenu()">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" onclick="displayMenu(), removeMenu()">Contact</a>
+                    </li>
+
+                </ul>
+            </nav>
+        
             <!--img slider start-->
             <section class="slider">
                 <div class="slides">
                     <input type="radio" name="radio_btn" id="radio1">
                     <input type="radio" name="radio_btn" id="radio2">
                     <input type="radio" name="radio_btn" id="radio3">
-                    <div class="slide slogan">
+                    <div class="slide slogan" id="slogan">
                         <h2>Je suis Alex Robert</h2>
                         <p>Je suis un dev junior qui adore se surpasser !</p>
                     </div>
-                    <div class="slide">
+                    <div class="slide" id="presentation">
                         <div class="presentation">
                             <h2>Alex Robert</h2>
                             <p>Salut !</br>
@@ -46,7 +76,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="slide skills">
+                    <div class="slide skills" id="skils">
                         <h2>Skills</h2>
                         <div class="skills__block">
                             <div class="html">
@@ -58,7 +88,7 @@
                                 <div class="css__bar"></div>
                             </div>
                             <div class="php">
-                                <p>php8</p>
+                                <p>php7</p>
                                 <div class="php__bar"></div>
                             </div>
                             <div class="sql">
@@ -95,7 +125,7 @@
             </div>
         </header>
 
-        <section class="project">
+        <section class="project" id="project">
             <h1>Mes projets</h1>
             <div class="cards">
                 <aside class="card">
@@ -164,9 +194,9 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h1>Me contacter</h1>
-            <form action="" method="post">
+            <form action="index.php" method="post">
                 <label for="lastname">Nom
                     <input type="text" name="lastname" id="lastname">
                 </label>
@@ -186,6 +216,7 @@
                 <label for="message">Message
                     <textarea rows="5" cols="30" name="message" id="message"></textarea>
                 </label>
+                <button type="submit" name="send">Envoyer</button>
             </form>
         </section>
     </body>
