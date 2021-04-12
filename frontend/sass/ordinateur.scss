@@ -18,10 +18,13 @@
             transform: rotate(90deg);
         }
     }
-    .cards{
-        display: flex;
-        margin: 16px auto 0 auto;
-        max-width: 1100px;
+    .project{
+        .cards{
+            display: flex;
+            justify-content: space-between;
+            margin: 16px auto 0 auto;
+            max-width: 1100px;
+        }
     }
     .contact{
         form{
@@ -42,7 +45,9 @@
             }
             button{
                 position: absolute;
-                bottom: -60px;
+                left: 50%;
+                bottom: -100px;
+                transform: translateX(-50%);
             }
         }
     }

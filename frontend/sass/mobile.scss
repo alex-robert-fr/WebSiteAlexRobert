@@ -193,7 +193,8 @@ header{
     padding-bottom: 100px;
     .cards{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .card{
         margin-top: 16px;
@@ -364,7 +365,7 @@ header{
     button{
         cursor: pointer;
         position: relative;
-        top: 310px;
+        bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
         color: $color_btn;

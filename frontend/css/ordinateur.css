@@ -17,10 +17,13 @@
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
-  .cards {
+  .project .cards {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 16px auto 0 auto;
     max-width: 1100px;
   }
@@ -43,6 +46,9 @@
   }
   .contact form button {
     position: absolute;
-    bottom: -60px;
+    left: 50%;
+    bottom: -100px;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
