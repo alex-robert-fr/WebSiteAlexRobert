@@ -29,10 +29,10 @@
     display: -ms-grid;
     display: grid;
     grid-template: "left right" "left right" "msg msg";
-    margin: 0 10%;
-    row-gap: 40px;
-    -webkit-column-gap: 90px;
-            column-gap: 90px;
+    margin: 0 auto;
+    row-gap: 20px;
+    -webkit-column-gap: 200px;
+            column-gap: 200px;
   }
   .contact form label {
     width: 100%;

@@ -187,11 +187,15 @@ header{
 }
 
 .project{
+    z-index: 1000;
     text-align: center;
     padding-top: 100px;
     padding-bottom: 100px;
+    .cards{
+        display: flex;
+        justify-content: space-between;
+    }
     .card{
-        margin: 0 auto;
         margin-top: 16px;
         width: 300px;
         height: 475px;
@@ -284,29 +288,53 @@ header{
         border-radius: 5px;
         border: $color_btn solid 2px;
         margin-right: 20px;
+        transition: all .5s;
+        &:hover{
+            color: $color_btn;
+            background-color: #fff;
+            transition: all .5s;
+        }
     }
     &__github{
         color: $color_btn;
         border: $color_btn solid 2px;
         border-radius: 5px;
+        transition: all .5s;
         i{
             font-size: $font_size_large;
             vertical-align: middle;
             margin-right: 5px;
+            transition: all .1s;
+        }
+        &:hover{
+            color: #fff;
+            background-color: $color_btn;
+            transition: all .5s;
+            i{
+                color: #fff;
+                transition: all .5s;
+            }
         }
     }
 }
 
-.contact{
+.contact{    
+    box-shadow: rgba($color: #000000, $alpha: 0.16) 0px 15px 20px inset;
     padding-bottom: 125px;
     color: #111;
+    background-color: #eee;
     h1{
         text-align: center;
-        margin-bottom: 49px;
+        margin-bottom: 50px;
+        padding-top: 80px;
+    }
+    form{
+        margin: 0 auto;
+        max-width: 1100px;
     }
     label{
         @include center_form();
-        font-size: $font_size_medium;
+        font-size: 2.7rem;
         font-weight: 400;
         letter-spacing: 2px;
         margin-top: 20px;
@@ -314,34 +342,48 @@ header{
     }
     input{
         @include center_form();
-        font-size: $font_size_large;
+        font-size: 3rem;
         width: 100%;
-        height: 49px;
+        height: 25px;
         outline: none;
         border: none;
-        background-color: #eee;
+        background-color: #fff;
+        margin-top: 7px
     }
     textarea{
         @include center_form();
         font-size: $font_size_medium;
         width: 100%;
-        height: 250px;
+        height: 100px;
         outline: none;
         border: none;
-        background-color: #eee;
+        background-color: #fff;
+        margin-top: 7px;
+        resize: none;
     }
     button{
         cursor: pointer;
         position: relative;
+        top: 310px;
         left: 50%;
         transform: translateX(-50%);
-        color: #111;
+        color: $color_btn;
         border: none;
-        width: 100px;
-        height: 35px;
+        width: 200px;
+        height: 50px;
         background-color: transparent;
-        border: 2px solid #111;
+        border: 2px solid $color_btn;
         border-radius: 10px;
+        font-size: $font_size_medium;
+        transition: all .5s;
+        i{
+            margin-right: 5px;
+        }
+        &:hover{
+            background-color: $color_btn;
+            color: #fff;
+            transition: all .5s;
+        }
     }
 }
 

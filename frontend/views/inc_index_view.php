@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../frontend/css/mobile.css">
     <link rel="stylesheet" href="../frontend/css/ordinateur.css">
-    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -185,7 +184,7 @@
             <label for="message">Message
                 <textarea rows="5" cols="30" name="message" id="message"></textarea>
             </label>
-            <button type="submit" name="send">Envoyer</button>
+            <button type="submit" name="send"><i class="fa fa-paper-plane"></i>Envoyer</button>
         </form>
     </section>
 </body>
