@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Robert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../frontend/css/mobile.css">
     <link rel="stylesheet" href="../frontend/css/ordinateur.css">
     <script defer src="js/script.js"></script>
@@ -97,34 +98,30 @@
         <h1>Mes projets</h1>
         <div class="cards">
             <aside class="card">
-                    <div class="card__header">
-                        <a class="card__header__logo_git" href="https://github.com/AxDesign/MuscuPlus">
-                            <img src="./frontend/img/logo_github.png">
-                        </a>
-                        <a href="http://muscuplus.alexrobert.fr/">
-                            <img class="card__header__img" src="./frontend/img/img_muscuplus.jpg">
-                        </a>
-                        <div class="card__header__tickets">
-                            <div class="card__header__tickets__php">PHP 7</div>
-                            <div class="card__header__tickets__js">JS</div>
-                        </div>
+                <div class="card__header">
+                    <img class="card__header__img" src="./frontend/img/img_muscuplus.jpg">
+                    <div class="card__header__tickets">
+                        <div class="card__header__tickets__php">PHP 7</div>
+                        <div class="card__header__tickets__js">JS</div>
                     </div>
-                    <div class="card__body">
-                        <h2>MuscuPlus</h2>
-                        <p>
-                            Voici Muscuplus,</br>
-                            Mon premier gros projet d'application web.</br>
-                            Le but de celle-ci étant d'avoir un suivie de ses activitées sportives.
-                            Ce projet me plaît énormément et c'est pour ca que je suis en train de 
-                            développer une nouvelle version en ce moment.
-                        </p>
-                    </div>
+                </div>
+                <div class="card__body">
+                    <h2>MuscuPlus</h2>
+                    <p>
+                        Voici Muscuplus,</br>
+                        Mon premier gros projet d'application web.</br>
+                        Le but de celle-ci étant d'avoir un suivie de ses activitées sportives.
+                        Ce projet me plaît énormément et c'est pour ca que je suis en train de 
+                        développer une nouvelle version en ce moment.
+                    </p>
+                </div>
+                <div class="btn">
+                    <a class="btn_card btn__website" target="_blank" href="http://muscuplus.alexrobert.fr/">Muscuplus</a>
+                    <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/MuscuPlus"><i class="fa fa-github"></i>GitHub</a>
+                </div>
             </aside>
             <aside class="card">
                 <div class="card__header">
-                    <a class="card__header__logo_git" href="https://github.com/AxDesign/AutoMarque">
-                        <img src="./frontend/img/logo_github.png">
-                    </a>
                     <img class="card__header__img" src="./frontend/img/img_premierepro.png">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__js">JS</div>
@@ -140,12 +137,12 @@
                         J'imagine beaucoup d'amélioration possible afin de pouvoir automatiser certaines parties des montages vidéos.
                     </p>
                 </div>
+                <div class="btn">
+                    <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/AutoMarque"><i class="fa fa-github"></i>GitHub</a>
+                </div>
             </aside>
             <aside class="card">
                 <div class="card__header">
-                <a class="card__header__logo_git" href="https://github.com/AxDesign/Passfilter">
-                    <img src="./frontend/img/logo_github.png">
-                </a>
                 <img class="card__header__img" src="./frontend/img/img_passfilter.jpg">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__cpp">C++</div>
@@ -158,6 +155,9 @@
                         Cela permet de définir une liste de mots interdits dans le mot de passe, ceci même si le 
                         langage geek est utilisé. 
                     </p>
+                </div>
+                <div class="btn">
+                    <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/Passfilter"><i class="fa fa-github"></i>GitHub</a>
                 </div>
             </aside>
         </div>

@@ -116,6 +116,7 @@ header .manual-btn:hover {
 }
 
 .slider .slides .skills h2 {
+  font-weight: 600;
   position: absolute;
   top: 75px;
   margin-left: 50%;
@@ -383,14 +384,13 @@ header .manual-btn:hover {
   margin: 0 auto;
   margin-top: 16px;
   width: 300px;
-  height: 424px;
+  height: 475px;
   border-radius: 25px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 10px 10px 20px;
           box-shadow: rgba(0, 0, 0, 0.16) 10px 10px 20px;
 }
 
 .project .card a {
-  color: #111;
   text-decoration: none;
 }
 
@@ -473,6 +473,40 @@ header .manual-btn:hover {
 
 .project h2 {
   font-weight: 400;
+}
+
+.btn_card {
+  padding: 5px 10px;
+  border: none;
+}
+
+.btn {
+  margin-top: -10px;
+}
+
+.btn a {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.btn__website {
+  color: #fff;
+  background-color: #323232;
+  border-radius: 5px;
+  border: #323232 solid 2px;
+  margin-right: 20px;
+}
+
+.btn__github {
+  color: #323232;
+  border: #323232 solid 2px;
+  border-radius: 5px;
+}
+
+.btn__github i {
+  font-size: 5rem;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .contact {
@@ -575,7 +609,7 @@ header .manual-btn:hover {
   content: attr(data-tooltip);
   position: absolute;
   top: 0;
-  left: 160px;
+  left: 120px;
   opacity: 0;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
