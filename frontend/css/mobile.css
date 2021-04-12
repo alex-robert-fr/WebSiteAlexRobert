@@ -375,11 +375,8 @@ header .manual-btn:hover {
 
 .project {
   text-align: center;
-  padding-bottom: 30px;
-}
-
-.project h1 {
-  margin-top: 26px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .project .card {
@@ -399,15 +396,25 @@ header .manual-btn:hover {
 
 .project .card__header {
   position: relative;
-  border-radius: 25px 25px 0 0;
-  background-color: #D4D4D4;
   width: 300px;
   height: 165px;
 }
 
-.project .card__header img {
+.project .card__header__img {
   border-radius: 25px 25px 0 0;
   width: 300px;
+}
+
+.project .card__header__logo_git {
+  z-index: 10000;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.project .card__header__logo_git img {
+  width: 50px;
 }
 
 .project .card__header__tickets {
@@ -471,7 +478,6 @@ header .manual-btn:hover {
 .contact {
   padding-bottom: 125px;
   color: #111;
-  padding-top: 32px;
 }
 
 .contact h1 {

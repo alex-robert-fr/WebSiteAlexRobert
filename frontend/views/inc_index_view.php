@@ -97,8 +97,35 @@
         <h1>Mes projets</h1>
         <div class="cards">
             <aside class="card">
+                    <div class="card__header">
+                        <a class="card__header__logo_git" href="https://github.com/AxDesign/MuscuPlus">
+                            <img src="./frontend/img/logo_github.png">
+                        </a>
+                        <a href="http://muscuplus.alexrobert.fr/">
+                            <img class="card__header__img" src="./frontend/img/img_muscuplus.jpg">
+                        </a>
+                        <div class="card__header__tickets">
+                            <div class="card__header__tickets__php">PHP 7</div>
+                            <div class="card__header__tickets__js">JS</div>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h2>MuscuPlus</h2>
+                        <p>
+                            Voici Muscuplus,</br>
+                            Mon premier gros projet d'application web.</br>
+                            Le but de celle-ci étant d'avoir un suivie de ses activitées sportives.
+                            Ce projet me plaît énormément et c'est pour ca que je suis en train de 
+                            développer une nouvelle version en ce moment.
+                        </p>
+                    </div>
+            </aside>
+            <aside class="card">
                 <div class="card__header">
-                <img class="card__header__img" src="./frontend/img/img_premierepro.png">
+                    <a class="card__header__logo_git" href="https://github.com/AxDesign/AutoMarque">
+                        <img src="./frontend/img/logo_github.png">
+                    </a>
+                    <img class="card__header__img" src="./frontend/img/img_premierepro.png">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__js">JS</div>
                         <div class="card__header__tickets__jsx">JSX</div>
@@ -115,28 +142,10 @@
                 </div>
             </aside>
             <aside class="card">
-                <a href="">
-                    <div class="card__header">
-                        <img class="card__header__img" src="./frontend/img/img_muscuplus.jpg">
-                        <div class="card__header__tickets">
-                            <div class="card__header__tickets__php">PHP 7</div>
-                            <div class="card__header__tickets__js">JS</div>
-                        </div>
-                    </div>
-                    <div class="card__body">
-                        <h2>MuscuPlus</h2>
-                        <p>
-                            Voici Muscuplus,</br>
-                            Mon premier gros projet d'application web.</br>
-                            Le but de celle-ci étant d'avoir un suivie de ses activitées sportives.
-                            Ce projet me plaît énormément et c'est pour ca que je suis en train de 
-                            développer une nouvelle version en ce moment.
-                        </p>
-                    </div>
-                </a>
-            </aside>
-            <aside class="card">
                 <div class="card__header">
+                <a class="card__header__logo_git" href="https://github.com/AxDesign/Passfilter">
+                    <img src="./frontend/img/logo_github.png">
+                </a>
                 <img class="card__header__img" src="./frontend/img/img_passfilter.jpg">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__cpp">C++</div>
