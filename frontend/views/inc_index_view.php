@@ -187,23 +187,26 @@
                 <button type="submit" name="send"><i class="fa fa-paper-plane"></i>Envoyer</button>
             </form>
         </section>
-        <!-- <footer>
+        <footer>
             <ul>
                 <li>
                     <i class="fa fa-github"></i>
+                    <a href="https://github.com/AxDesign">AxDesign</a>
                 </li>
 
                 <li>
-
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto: contact.alexrobert04@gmail.com">contact.alexrobert04@gmail.com</a>
                 </li>
-
+                
                 <li>
-
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:+33 6 12 82 23 71">06 12 82 23 71</a>
                 </li>
             </ul>
-            Github -->
+            <!-- Github -->
             <!-- adresse mail -->
             <!-- Tel -->
-        <!--</footer> -->
+        </footer>
     </body>
 </html>
