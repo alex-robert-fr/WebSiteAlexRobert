@@ -7,13 +7,13 @@ if(isset($_POST['send'])){
     } catch (Exception $error){
         echo $error->getMessage();
     }
+    require_once('./mail/mail_contact.php');
 }
-
 
 require_once('./frontend/views/inc_index_view.php');
 
 
-//récupérer entrer user
-//vérifier les entrer
+//récupérer entrer user//
+//vérifier les entrer//
 //envoyer en base les données
 //envoyer un mail
