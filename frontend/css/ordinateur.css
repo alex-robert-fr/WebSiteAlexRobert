@@ -44,7 +44,7 @@
   .contact form label[for=message], .contact form textarea {
     grid-area: msg;
   }
-  .contact form button {
+  .contact form .submit_btn label {
     position: absolute;
     left: 50%;
     bottom: -100px;

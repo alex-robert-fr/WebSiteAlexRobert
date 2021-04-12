@@ -7,6 +7,8 @@ class ContactForm{
     public string $email;
     public string $msg;
 
+    public array $error;
+
     public function __construct(array $formFields)
     {
         foreach($formFields as $field){
@@ -14,51 +16,51 @@ class ContactForm{
         }
     }
 
-    public function setName(string $name): void{
+    private function setName(string $name): void{
         if(strlen($name) < 3){
-            throw new Exception('Le prénom est trop court');
+            $this->error = ['name' => 'Le prénom est trop court'];
         }
         if(strlen($name) > 20){
-            throw new Exception('Le prénom est trop long');
+            $this->error = ['name' => 'Le prénom est trop long'];
         }
         $this->name = $name;
     }
 
-    public function setLastname(string $lastname): void{
+    private function setLastname(string $lastname): void{
         if(strlen($lastname) < 3){
-            throw new Exception('Le nom est trop court');
+            $this->error['lastname'] = 'Le nom est trop court';
         }
         if(strlen($lastname) > 30){
-            throw new Exception('Le nom est trop long');
+            $this->error['lastname'] = 'Le nom est trop long';
         }
         $this->lastname = $lastname;
     }
     
-    public function setSubject(string $subject): void{
+    private function setSubject(string $subject): void{
         if(strlen($subject) < 3){
-            throw new Exception('Le sujet est trop court');
+            $this->error['subject'] = 'Le sujet est trop court';
         }
         if(strlen($subject) > 40){
-            throw new Exception('Le sujet est trop long');
+            $this->error['subject'] = 'Le sujet est trop long';
         }
         $this->subject = $subject;
     }
     
-    public function setEmail(string $email): void{
+    private function setEmail(string $email): void{
         $this->email = $email;
     }
     
-    public function setMessage(string $msg): void{
+    private function setMessage(string $msg): void{
         if(strlen($msg) < 3){
-            throw new Exception('Le message est trop court');
+            $this->error['message'] = 'Le message est trop court';
         }
         if(strlen($msg) > 3000){
-            throw new Exception('Le message est trop long');
+            $this->error['message'] = 'Le message est trop long';
         }
         $this->msg = $msg;
     }
 
-    public function SendDataBase():void {
+    private function SendDataBase():void {
         
     }
 }

@@ -25,6 +25,10 @@ h2 {
   letter-spacing: 1px;
 }
 
+.error {
+  font-size: 2.4rem;
+}
+
 header {
   color: #fff;
   background-color: #111;
@@ -576,7 +580,7 @@ header .manual-btn:hover {
   margin-bottom: 13px;
 }
 
-.contact input {
+.contact label input {
   display: block;
   margin: 0 auto;
   width: 90%;
@@ -603,7 +607,17 @@ header .manual-btn:hover {
   resize: none;
 }
 
-.contact button {
+.contact .submit_btn label {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   position: relative;
   bottom: -40px;
@@ -611,7 +625,6 @@ header .manual-btn:hover {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: #323232;
-  border: none;
   width: 200px;
   height: 50px;
   background-color: transparent;
@@ -622,12 +635,24 @@ header .manual-btn:hover {
   transition: all .5s;
 }
 
-.contact button i {
-  margin-right: 5px;
+.contact .submit_btn label input {
+  font-size: 4rem;
+  color: #323232;
+  width: 100px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-.contact button:hover {
+.contact .submit_btn label:hover {
   background-color: #323232;
+  color: #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.contact .submit_btn label:hover input {
   color: #fff;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -714,7 +739,7 @@ footer li .fa {
   content: attr(data-tooltip);
   position: absolute;
   top: 0;
-  left: 120px;
+  left: 160px;
   opacity: 0;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;

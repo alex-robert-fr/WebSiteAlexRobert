@@ -162,19 +162,22 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h1>Me contacter</h1>
-            <form action="index.php" method="post">
+            <form action="index.php#contact" method="post">
                 <label for="lastname">Nom
                     <input type="text" name="lastname" id="lastname">
+                    <p class="error"><?=(isset($errorLastname)) ? $errorLastname : ''?></p>
                 </label>
 
                 <label for="name">Prénom
                     <input type="text" name="name" id="name">
+                    <p class="error"><?=(isset($errorName)) ? $errorName : ''?></p>
                 </label>
 
                 <label for="subject">Sujet
                     <input type="text" name="subject" id="subject">
+                    <p class="error"><?=(isset($errorSubject)) ? $errorSubject : ''?></p>
                 </label>
 
                 <label for="email">Email
@@ -183,8 +186,15 @@
 
                 <label for="message">Message
                     <textarea rows="5" cols="30" name="message" id="message"></textarea>
+                    <p class="error"><?=(isset($errorMessage)) ? $errorMessage : ''?></p>
                 </label>
-                <button type="submit" name="send"><i class="fa fa-paper-plane"></i>Envoyer</button>
+                <div class="submit_btn">
+                    <label for="send">
+                        <i class="fa fa-paper-plane"></i>
+                        <input type="submit" value="Envoyer" name="send" id="send">
+                    </label>
+                </div>
+                <!-- <button type="submit" name="send"><i class="fa fa-paper-plane" disabled></i>Envoyer</button> -->
             </form>
         </section>
         <footer>

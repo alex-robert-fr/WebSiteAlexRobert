@@ -43,7 +43,7 @@
             label[for=message], textarea{
                 grid-area: msg;
             }
-            button{
+            .submit_btn label{
                 position: absolute;
                 left: 50%;
                 bottom: -100px;
