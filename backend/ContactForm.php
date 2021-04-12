@@ -23,7 +23,7 @@ class ContactForm{
         if(strlen($name) > 20){
             $this->error = ['name' => 'Le prénom est trop long'];
         }
-        $this->name = $name;
+        $this->name = htmlspecialchars($name);
     }
 
     private function setLastname(string $lastname): void{
@@ -33,7 +33,7 @@ class ContactForm{
         if(strlen($lastname) > 30){
             $this->error['lastname'] = 'Le nom est trop long';
         }
-        $this->lastname = $lastname;
+        $this->lastname = htmlspecialchars($lastname);
     }
     
     private function setSubject(string $subject): void{
@@ -43,11 +43,11 @@ class ContactForm{
         if(strlen($subject) > 40){
             $this->error['subject'] = 'Le sujet est trop long';
         }
-        $this->subject = $subject;
+        $this->subject = htmlspecialchars($subject);
     }
     
     private function setEmail(string $email): void{
-        $this->email = $email;
+        $this->email = htmlspecialchars($email);
     }
     
     private function setMessage(string $msg): void{
@@ -57,7 +57,7 @@ class ContactForm{
         if(strlen($msg) > 3000){
             $this->error['message'] = 'Le message est trop long';
         }
-        $this->msg = $msg;
+        $this->msg = htmlspecialchars($msg);
     }
 
     private function SendDataBase():void {
