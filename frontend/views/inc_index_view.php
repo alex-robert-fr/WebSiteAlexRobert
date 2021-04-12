@@ -10,40 +10,7 @@
         <script defer src="js/script.js"></script>
     </head>
     <body>
-        <header>
-            <label for="menuVisible" onclick="displayMenu()">
-                <div class="menu_burger">
-                    <img src="../frontend/svg/burger.svg" alt="Menu burger">
-                    <p>menu</p>
-                </div>
-            </label>
-            <input type="checkbox" name="menu" id="menuVisible">
-
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#slogan" onclick="displayMenu(), removeMenu()">Accueil</a>
-                    </li>
-
-                    <li>
-                        <a href="#presentation" onclick="displayMenu(), removeMenu()">A Propos</a>
-                    </li>
-
-                    <li>
-                        <a href="#skils" onclick="displaySkills(), removeMenu()">Skills</a>
-                    </li>
-
-                    <li>
-                        <a href="#project" onclick="displayMenu(), removeMenu()">Projects</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" onclick="displayMenu(), removeMenu()">Contact</a>
-                    </li>
-
-                </ul>
-            </nav>
-        
+        <header>        
             <!--img slider start-->
             <section class="slider">
                 <div class="slides">
