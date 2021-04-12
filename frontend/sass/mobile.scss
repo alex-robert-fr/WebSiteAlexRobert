@@ -192,6 +192,10 @@ header{
             background-color: #D4D4D4;
             width: 300px;
             height: 165px;
+            img{
+                border-radius: 25px 25px 0 0;
+                width: 300px;
+            }
             &__tickets{
                 position: absolute;
                 bottom: 9px;
@@ -210,7 +214,13 @@ header{
                     background-color: #6E86FF;
                 }
                 &__js{
-                    background-color: #FFE26E;
+                    background-color: #fdd844;
+                }
+                &__jsx{
+                    background-color: #44c4ff;
+                }
+                &__cpp{
+                    background-color: #2732cf;
                 }
             }
         }
@@ -226,6 +236,8 @@ header{
                 font-weight: 400;
                 letter-spacing: 1px;
                 padding: 0 15px;
+                text-align: left;
+                hyphens: auto;
             }
         }
     }

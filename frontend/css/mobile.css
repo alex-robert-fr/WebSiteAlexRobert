@@ -405,6 +405,11 @@ header .manual-btn:hover {
   height: 165px;
 }
 
+.project .card__header img {
+  border-radius: 25px 25px 0 0;
+  width: 300px;
+}
+
 .project .card__header__tickets {
   position: absolute;
   bottom: 9px;
@@ -427,7 +432,15 @@ header .manual-btn:hover {
 }
 
 .project .card__header__tickets__js {
-  background-color: #FFE26E;
+  background-color: #fdd844;
+}
+
+.project .card__header__tickets__jsx {
+  background-color: #44c4ff;
+}
+
+.project .card__header__tickets__cpp {
+  background-color: #2732cf;
 }
 
 .project .card__body {
@@ -445,6 +458,10 @@ header .manual-btn:hover {
   font-weight: 400;
   letter-spacing: 1px;
   padding: 0 15px;
+  text-align: left;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .project h2 {
