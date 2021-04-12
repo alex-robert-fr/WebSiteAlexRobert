@@ -42,6 +42,22 @@
         }
     }
 }
+@mixin tooltip_stat($top) {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0;
+    left: $top;
+    opacity: 0;
+    
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;
+    font-size: $font_size_medium;
+    transform: rotate(-90deg); 
+}
+
 body,h1,h2,h3,h4,h4,h6,p{
     margin: 0;
     padding: 0;
@@ -298,4 +314,27 @@ header{
         border: 2px solid #111;
         border-radius: 10px;
     }
+}
+
+.html[data-tooltip]:before {
+    @include tooltip_stat(10px);
+}
+.css[data-tooltip]:before {
+    @include tooltip_stat(85px); 
+}
+.php[data-tooltip]:before {
+    @include tooltip_stat(160px); 
+}
+.sql[data-tooltip]:before {
+    @include tooltip_stat(235px); 
+}
+.js[data-tooltip]:before {
+    @include tooltip_stat(310px); 
+}
+
+[data-tooltip]:hover:before {
+    opacity: 1;
+    /* customizable */
+    background: #fff;
+    margin-top: -75px;
 }

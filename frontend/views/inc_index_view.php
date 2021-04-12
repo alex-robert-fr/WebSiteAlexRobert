@@ -47,25 +47,25 @@
                 <div class="slide skills">
                     <h2>Skills</h2>
                     <div class="skills__block">
-                        <div class="html">
+                        <div data-tooltip="96%" class="html">
                             <p>html5</p>
                             <div class="html__bar"></div>
                         </div>
-                        <div class="css">
+                        <div data-tooltip="92%" class="css">
                             <p>css3</p>
                             <div class="css__bar"></div>
                         </div>
-                        <div class="php">
+                        <div data-tooltip="55%" class="php">
                             <p>php7</p>
                             <div class="php__bar"></div>
                         </div>
-                        <div class="sql">
+                        <div data-tooltip="53%" class="sql">
                             <p>sql</p>
                             <div class="sql__bar"></div>
                         </div>
-                        <div class="js">
+                        <div data-tooltip="30%" class="js">
                             <p>js</p>
-                            <div class="js__bar"></div>
+                            <div  class="js__bar"></div>
                         </div>
                     </div>
                 </div>
