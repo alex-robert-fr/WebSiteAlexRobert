@@ -59,6 +59,12 @@ header .manual-btn:hover {
   background-color: #fff;
 }
 
+.slide p {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
 .slider {
   position: relative;
   height: 660px;
@@ -97,12 +103,6 @@ header .manual-btn:hover {
   min-width: 100vw;
   -webkit-transition: 1.5s;
   transition: 1.5s;
-}
-
-.slider .slides .slide p {
-  font-size: 2.4rem;
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 
 .slider .slides .presentation {
@@ -392,6 +392,11 @@ header .manual-btn:hover {
           box-shadow: rgba(0, 0, 0, 0.16) 10px 10px 20px;
 }
 
+.project .card a {
+  color: #111;
+  text-decoration: none;
+}
+
 .project .card__header {
   position: relative;
   border-radius: 25px 25px 0 0;
@@ -447,9 +452,8 @@ header .manual-btn:hover {
 }
 
 .contact {
-  background-color: #111;
   padding-bottom: 125px;
-  color: #fff;
+  color: #111;
   padding-top: 32px;
 }
 
@@ -477,6 +481,8 @@ header .manual-btn:hover {
   width: 100%;
   height: 49px;
   outline: none;
+  border: none;
+  background-color: #eee;
 }
 
 .contact textarea {
@@ -487,6 +493,8 @@ header .manual-btn:hover {
   width: 100%;
   height: 250px;
   outline: none;
+  border: none;
+  background-color: #eee;
 }
 
 .contact button {
@@ -495,11 +503,11 @@ header .manual-btn:hover {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #fff;
+  color: #111;
   border: none;
   width: 100px;
   height: 35px;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #111;
   border-radius: 10px;
 }

@@ -1,4 +1,16 @@
 @media (min-width: 900px) {
+    @import 'tools';
+    h1{
+        font-size: $font_size_extremely_large;
+    }
+    .slogan{
+        h2{
+            font-size: $font_size_extremely_large;
+        }
+        p{
+            font-size: $font_size_medium;
+        }
+    }
     .skills{
         &__block{
             display: flex;
@@ -8,6 +20,8 @@
     }
     .cards{
         display: flex;
+        margin: 16px auto 0 auto;
+        max-width: 1100px;
     }
     .contact{
         form{

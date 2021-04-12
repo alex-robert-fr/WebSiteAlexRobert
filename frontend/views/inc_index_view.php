@@ -10,18 +10,17 @@
         <script defer src="js/script.js"></script>
     </head>
     <body>
-        <header>        
-            <!--img slider start-->
+        <header>
             <section class="slider">
                 <div class="slides">
                     <input type="radio" name="radio_btn" id="radio1">
                     <input type="radio" name="radio_btn" id="radio2">
                     <input type="radio" name="radio_btn" id="radio3">
-                    <div class="slide slogan" id="slogan">
+                    <div class="slide slogan">
                         <h2>Je suis Alex Robert</h2>
                         <p>Je suis un dev junior qui adore se surpasser !</p>
                     </div>
-                    <div class="slide" id="presentation">
+                    <div class="slide">
                         <div class="presentation">
                             <h2>Alex Robert</h2>
                             <p>Salut !</br>
@@ -43,7 +42,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="slide skills" id="skils">
+                    <div class="slide skills">
                         <h2>Skills</h2>
                         <div class="skills__block">
                             <div class="html">
@@ -92,7 +91,7 @@
             </div>
         </header>
 
-        <section class="project" id="project">
+        <section class="project">
             <h1>Mes projets</h1>
             <div class="cards">
                 <aside class="card">
@@ -117,25 +116,27 @@
                     </div>
                 </aside>
                 <aside class="card">
-                    <div class="card__header">
-                        <div class="card__header__img"></div>
-                        <div class="card__header__tickets">
-                            <div class="card__header__tickets__php">PHP 7</div>
-                            <div class="card__header__tickets__js">JS</div>
+                    <a href="">
+                        <div class="card__header">
+                            <div class="card__header__img"></div>
+                            <div class="card__header__tickets">
+                                <div class="card__header__tickets__php">PHP 7</div>
+                                <div class="card__header__tickets__js">JS</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card__body">
-                        <h2>Titre</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
-                            Donec porta nisi at neque sagittis tempor. Morbi
-                            ultrices, nunc sed dapibus sollicitudin, mi metus
-                            facilisis magna, id lobortis arcu enim quis nisl.
-                            Vestibulum maximus pharetra enim. Aliquam erat
-                            volutpat.
-                        </p>
-                    </div>
+                        <div class="card__body">
+                            <h2>MuscuPlus</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit.
+                                Donec porta nisi at neque sagittis tempor. Morbi
+                                ultrices, nunc sed dapibus sollicitudin, mi metus
+                                facilisis magna, id lobortis arcu enim quis nisl.
+                                Vestibulum maximus pharetra enim. Aliquam erat
+                                volutpat.
+                            </p>
+                        </div>
+                    </a>
                 </aside>
                 <aside class="card">
                     <div class="card__header">
@@ -161,7 +162,7 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact">
             <h1>Me contacter</h1>
             <form action="index.php" method="post">
                 <label for="lastname">Nom

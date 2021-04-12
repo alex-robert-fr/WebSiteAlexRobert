@@ -1,10 +1,5 @@
 @import url("https://use.typekit.net/xtr6tty.css");
-
-$font_size_very_little : 2rem; // 10px -> Très petite
-$font_size_little : 2.4rem; // 12px -> Petite
-$font_size_medium : 4rem; // 20px -> Moyenne
-$font_size_large : 5rem; // 25px -> Grande
-$font_size_very_large : 6rem; // 30px -> Très grande
+@import 'tools';
 
 @mixin center_form {
     display: block;
@@ -96,6 +91,13 @@ header{
         }
     }
 }
+.slide{
+    p{
+        font-size: $font_size_little;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+}
 .slider{
     position: relative;
     height: 660px;
@@ -118,11 +120,6 @@ header{
             height: 100%;
             min-width: 100vw;
             transition: 1.5s;
-            p{
-                font-size: $font_size_little;
-                font-weight: 300;
-                letter-spacing: 1px;
-            }
         }
         .presentation{
             text-align: left;
@@ -185,6 +182,10 @@ header{
         height: 424px;
         border-radius: 25px;
         box-shadow: rgba($color: #000000, $alpha: 0.16) 10px 10px 20px;
+        a{
+            color: #111;
+            text-decoration: none;
+        }
         &__header{
             position: relative;
             border-radius: 25px 25px 0 0;
@@ -234,9 +235,8 @@ header{
 }
 
 .contact{
-    background-color: #111;
     padding-bottom: 125px;
-    color: #fff;
+    color: #111;
     padding-top: 32px;
     h1{
         text-align: center;
@@ -256,6 +256,8 @@ header{
         width: 100%;
         height: 49px;
         outline: none;
+        border: none;
+        background-color: #eee;
     }
     textarea{
         @include center_form();
@@ -263,18 +265,20 @@ header{
         width: 100%;
         height: 250px;
         outline: none;
+        border: none;
+        background-color: #eee;
     }
     button{
         cursor: pointer;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        color: #fff;
+        color: #111;
         border: none;
         width: 100px;
         height: 35px;
         background-color: transparent;
-        border: 2px solid #fff;
+        border: 2px solid #111;
         border-radius: 10px;
     }
 }
