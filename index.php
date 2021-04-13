@@ -1,4 +1,13 @@
 <?php
+
+$use_sts = true;
+if($use_sts && isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off'){
+    header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
+} elseif ($use_sts) {
+    header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], true, 301);
+    die();
+}
+
 require_once('./backend/ContactForm.php');
 
 if(isset($_POST['send'])){
@@ -24,9 +33,3 @@ if(isset($_POST['send'])){
 }
 
 require_once('./frontend/views/inc_index_view.php');
-
-
-//récupérer entrer user//
-//vérifier les entrer//
-//envoyer en base les données
-//envoyer un mail

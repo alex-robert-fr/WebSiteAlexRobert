@@ -164,7 +164,7 @@
 
         <section class="contact" id="contact">
             <h1>Me contacter</h1>
-            <form action="index.php#contact" method="post">
+            <form action="#contact" method="post">
                 <label for="lastname">Nom
                     <input type="text" name="lastname" id="lastname">
                     <p class="error"><?=(isset($errorLastname)) ? $errorLastname : ''?></p>

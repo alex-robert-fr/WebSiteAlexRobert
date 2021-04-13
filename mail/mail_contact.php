@@ -11,6 +11,6 @@ $subject    = 'Formulaire de contact';
 $message    = '<p>Envoyé par ' .$contactForm->name. ' ' . $contactForm->lastname. '</p>';
 $message    .= '<p>Depuis ' .$contactForm->email . '</p>';
 $message    .= '<p>' .$contactForm->subject. ':' . '</p>';
-$message    .= '<p>' .$contactForm->msg. '</p>';
+$message    .= '<p>' .$contactForm->message. '</p>';
 
 mail($to, $subject, $message, $header);

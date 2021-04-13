@@ -5,7 +5,7 @@ class ContactForm{
     public string $lastname;
     public string $subject;
     public string $email;
-    public string $msg;
+    public string $message;
 
     public array $error;
 
@@ -17,50 +17,31 @@ class ContactForm{
     }
 
     private function setName(string $name): void{
-        if(strlen($name) < 3){
-            $this->error = ['name' => 'Le prénom est trop court'];
-        }
-        if(strlen($name) > 20){
-            $this->error = ['name' => 'Le prénom est trop long'];
-        }
-        $this->name = htmlspecialchars($name);
+        $this->checkLengthInput($name, 'name', 3, 20);
     }
 
     private function setLastname(string $lastname): void{
-        if(strlen($lastname) < 3){
-            $this->error['lastname'] = 'Le nom est trop court';
-        }
-        if(strlen($lastname) > 30){
-            $this->error['lastname'] = 'Le nom est trop long';
-        }
-        $this->lastname = htmlspecialchars($lastname);
+        $this->checkLengthInput($lastname, 'lastname', 3, 30);
     }
     
     private function setSubject(string $subject): void{
-        if(strlen($subject) < 3){
-            $this->error['subject'] = 'Le sujet est trop court';
-        }
-        if(strlen($subject) > 40){
-            $this->error['subject'] = 'Le sujet est trop long';
-        }
-        $this->subject = htmlspecialchars($subject);
+        $this->checkLengthInput($subject, 'subject', 3, 40);
     }
     
     private function setEmail(string $email): void{
-        $this->email = htmlspecialchars($email);
     }
     
-    private function setMessage(string $msg): void{
-        if(strlen($msg) < 3){
-            $this->error['message'] = 'Le message est trop court';
-        }
-        if(strlen($msg) > 3000){
-            $this->error['message'] = 'Le message est trop long';
-        }
-        $this->msg = htmlspecialchars($msg);
+    private function setMessage(string $message): void{
+        $this->checkLengthInput($message, 'message', 3, 3000);
     }
 
-    private function SendDataBase():void {
-        
+    private function checkLengthInput(string $input, string $varName, int $min, int $max): void{
+        if(strlen($input) < $min){
+            $this->error[$varName] = 'Le ' .$varName. ' est trop court';
+        }
+        if(strlen($input) > $max){
+            $this->error[$varName] = 'Le ' .$varName. ' est trop long';
+        }
+        $this->{$varName} = htmlspecialchars($input);
     }
 }
