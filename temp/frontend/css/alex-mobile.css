@@ -1,9 +1,14 @@
 @import url("https://use.typekit.net/xtr6tty.css");
-body, h1, h2, h3, h4, h4, h6, p {
+/*Global*/
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+body, header, h1, h2, h3, h4, h4, h6, p {
   margin: 0;
   padding: 0;
 }
 
+/*alexrobert.fr*/
+/*automatix*/
 html {
   font-size: 5px;
 }
@@ -31,7 +36,7 @@ h2 {
 
 header {
   color: #fff;
-  background-color: #111;
+  background-color: #191919;
 }
 
 header .navigation-manual {
@@ -61,6 +66,18 @@ header .manual-btn:not(:last-child) {
 
 header .manual-btn:hover {
   background-color: #fff;
+}
+
+.slide h2 ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.slide h2 ul li {
+  list-style: none;
 }
 
 .slide p {
@@ -378,6 +395,103 @@ header .manual-btn:hover {
   margin-left: -200vw;
 }
 
+.html[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: #333;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px silver;
+          box-shadow: 2px 2px 1px silver;
+  font-size: 4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.css[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 85px;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: #333;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px silver;
+          box-shadow: 2px 2px 1px silver;
+  font-size: 4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.php[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 160px;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: #333;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px silver;
+          box-shadow: 2px 2px 1px silver;
+  font-size: 4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.sql[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 235px;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: #333;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px silver;
+          box-shadow: 2px 2px 1px silver;
+  font-size: 4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.js[data-tooltip]:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  left: 310px;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  padding: 10px;
+  color: #333;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px silver;
+          box-shadow: 2px 2px 1px silver;
+  font-size: 4rem;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+[data-tooltip]:hover:before {
+  opacity: 1;
+  /* customizable */
+  background: #fff;
+  margin-top: -75px;
+}
+
 .project {
   z-index: 1000;
   text-align: center;
@@ -554,7 +668,7 @@ header .manual-btn:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 15px 20px inset;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 15px 20px inset;
   padding-bottom: 125px;
-  color: #111;
+  color: #191919;
   background-color: #eee;
 }
 
@@ -660,7 +774,7 @@ header .manual-btn:hover {
 }
 
 footer {
-  background-color: #111;
+  background-color: #191919;
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,101 +812,4 @@ footer li a {
 footer li .fa {
   font-size: 6rem;
   vertical-align: middle;
-}
-
-.html[data-tooltip]:before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 0;
-  left: 10px;
-  opacity: 0;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  padding: 10px;
-  color: #333;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 1px silver;
-          box-shadow: 2px 2px 1px silver;
-  font-size: 4rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.css[data-tooltip]:before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 0;
-  left: 85px;
-  opacity: 0;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  padding: 10px;
-  color: #333;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 1px silver;
-          box-shadow: 2px 2px 1px silver;
-  font-size: 4rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.php[data-tooltip]:before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 0;
-  left: 160px;
-  opacity: 0;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  padding: 10px;
-  color: #333;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 1px silver;
-          box-shadow: 2px 2px 1px silver;
-  font-size: 4rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.sql[data-tooltip]:before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 0;
-  left: 235px;
-  opacity: 0;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  padding: 10px;
-  color: #333;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 1px silver;
-          box-shadow: 2px 2px 1px silver;
-  font-size: 4rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.js[data-tooltip]:before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 0;
-  left: 310px;
-  opacity: 0;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-  padding: 10px;
-  color: #333;
-  border-radius: 10px;
-  -webkit-box-shadow: 2px 2px 1px silver;
-          box-shadow: 2px 2px 1px silver;
-  font-size: 4rem;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-[data-tooltip]:hover:before {
-  opacity: 1;
-  /* customizable */
-  background: #fff;
-  margin-top: -75px;
 }

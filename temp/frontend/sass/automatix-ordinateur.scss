@@ -1,0 +1,44 @@
+@media(max-width: 600px){
+    .features{
+        padding: 63px 5%;
+        .text{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 1000px){
+    .ambitious{    
+        padding: 88px 5%;
+    }
+}
+@media (min-width: 1400px) {
+    @import 'tools';
+
+    .features{
+        display: grid;
+        grid-template: 
+                        "header header"
+                        "markingText markingImage";
+        column-gap: 175px;
+        h2{
+            margin-bottom: 63px;
+        }
+        .text{
+            align-self: flex-start;
+            text-align: left;
+            width: 600px;
+            grid-area: markingText;
+            h3{
+                margin-bottom: 56px;
+            }
+        }
+        .btn{
+            grid-area: markingText;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+        img{
+            grid-area: markingImage;
+        }
+    }
+}

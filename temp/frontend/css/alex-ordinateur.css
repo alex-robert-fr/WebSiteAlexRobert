@@ -1,4 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @media (min-width: 900px) {
+  /*Global*/
+  body, header, h1, h2, h3, h4, h4, h6, p {
+    margin: 0;
+    padding: 0;
+  }
+  /*alexrobert.fr*/
+  /*automatix*/
   h1 {
     font-size: 8rem;
   }

@@ -1,0 +1,92 @@
+/*Global*/
+body,header,h1,h2,h3,h4,h4,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+/*alexrobert.fr*/
+//Font
+$font_size_very_little : 2rem; // 10px -> Très petite
+$font_size_little : 2.4rem; // 12px -> Petite
+$font_size_medium : 4rem; // 20px -> Moyenne
+$font_size_large : 5rem; // 25px -> Grande
+$font_size_very_large : 6rem; // 30px -> Très grande
+$font_size_extremely_large : 8rem; // 40px -> Extremement grande
+
+//Color
+$primary_gray: #191919;
+$color_btn: rgb(50, 50, 50);
+
+//Mixin
+@mixin center_form {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+@mixin stat_bar($color, $percentage, $size: 450px){
+    @if(min-width: 900px){
+        $size: 50vw;
+    }
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    text-transform: uppercase;
+    width: 75px;
+    p{
+        font-size: 3.6rem;
+        font-weight: 400;
+        @media (min-width: 900px){
+            text-align: right;
+            transform: rotate(-90deg);
+            margin-top: 50px;
+        }
+    }
+    &__bar{
+        position: relative;
+        margin: 0 auto;
+        width: 38px;
+        height: $size;
+        background-color: #222;
+        &::before{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            content: '';
+            width: 100%;
+            height: $percentage;
+            background-color: $color;
+        }
+    }
+}
+@mixin tooltip_stat($top) {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 0;
+    left: $top;
+    opacity: 0;
+    
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;
+    font-size: $font_size_medium;
+    transform: rotate(-90deg); 
+}
+
+/*automatix*/
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+$roboto: 'Roboto', sans-serif;
+$antonio: Antonio, sans-serif;
+$font_thin: 100;
+$font_light: 300;
+$font_regular: 400;
+$font_medium: 500;
+//Color
+$gray_automatix: #161616;
+$gray_text: #909090;
+$gray_medium: #292929;
+
+$btn_download: #2463FF;

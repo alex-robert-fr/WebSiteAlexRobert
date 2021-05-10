@@ -1,0 +1,125 @@
+//Import file
+@import 'tools';
+
+html{
+    font-size: 10px;
+    font-family: $roboto;
+}
+//Header
+header{
+    background-color: $gray_automatix;
+    color: #fff;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    &__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font: $font_medium 10rem $antonio;
+        }
+        .logo_premiere{
+            max-width: 118px;
+            max-height: 114px;
+            margin-right: 33px;
+        }
+    }
+    p{
+        margin: 10px 0 25px;
+        font: $font_light 2.5rem $roboto;
+        letter-spacing: 3.5px;
+        color: $gray_text;
+    }
+    .version{
+        margin: 14px 0 0;
+        font: $font_thin 1.8rem $roboto;
+        letter-spacing: 2px;
+    }
+}
+
+//Bouton
+.btn{
+    align-self: center;
+    font-family: $roboto;
+    background: $btn_download no-repeat padding-box;
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: $font_regular;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+
+//Mes ambitions
+
+.ambitious, .features{
+    h2{
+        font: $font_medium 6rem $roboto;
+        letter-spacing: 6px;
+    }
+    h3{
+        font: $font_medium 4rem $roboto;
+        letter-spacing: 5px;
+    }
+    p{
+        font: $font_light 1.7rem $roboto;
+        letter-spacing: 2.5px;
+        color: $gray_text;
+    }
+}
+
+.ambitious{
+    color: #fff;
+    background-color: $gray_medium;
+    padding: 88px 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        text-align: center;
+        margin: 44px 0;
+        max-width: 1015px;
+    }
+}
+
+.features{
+    color: #fff;
+    background-color: $gray_automatix;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 63px 10%;
+    h2{
+        grid-area: header;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .text{
+        align-self: center;
+        text-align: center;
+        width: 600px;
+        h3{
+            margin-bottom: 15px;
+        }
+    }
+    .btn{
+        align-self: center;
+    }
+    img{
+        margin: 20px 0;
+        min-width: 300px;
+        max-width: 500px;
+        justify-self: flex-end;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.5);
+    }
+}

@@ -1,68 +1,10 @@
+//import font
 @import url("https://use.typekit.net/xtr6tty.css");
+
+//import file
 @import 'tools';
 
-@mixin center_form {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-}
-
-@mixin stat_bar($color, $percentage, $size: 450px){
-    @if(min-width: 900px){
-        $size: 50vw;
-    }
-    display: flex;
-    flex-direction: column-reverse;
-    align-content: center;
-    text-transform: uppercase;
-    width: 75px;
-    p{
-        font-size: 3.6rem;
-        font-weight: 400;
-        @media (min-width: 900px){
-            text-align: right;
-            transform: rotate(-90deg);
-            margin-top: 50px;
-        }
-    }
-    &__bar{
-        position: relative;
-        margin: 0 auto;
-        width: 38px;
-        height: $size;
-        background-color: #222;
-        &::before{
-            position: absolute;
-            bottom: 0;
-            display: block;
-            content: '';
-            width: 100%;
-            height: $percentage;
-            background-color: $color;
-        }
-    }
-}
-@mixin tooltip_stat($top) {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: 0;
-    left: $top;
-    opacity: 0;
-    
-    transition: all 0.15s ease;
-    padding: 10px;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 2px 2px 1px silver;
-    font-size: $font_size_medium;
-    transform: rotate(-90deg); 
-}
-
-body,h1,h2,h3,h4,h4,h6,p{
-    margin: 0;
-    padding: 0;
-}
-
+//Global
 html{
     font-size: 5px;
 }
@@ -84,9 +26,10 @@ h2{
     font-size: $font_size_little;
 }
 
+//Header
 header{
     color: #fff;
-    background-color: #111;
+    background-color: $primary_gray;
     .navigation-manual{
         z-index: 1000;
         display: block;
@@ -111,7 +54,20 @@ header{
         }
     }
 }
+
+//Slide
 .slide{
+    $time-anim : 30s;
+    h2 ul{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        text-align: left;
+        li{
+            list-style: none;
+        }
+    }
     p{
         font-size: $font_size_little;
         font-weight: 300;
@@ -189,7 +145,30 @@ header{
 #radio3:checked ~ .slogan{
     margin-left: -200vw;
 }
+.html[data-tooltip]:before {
+    @include tooltip_stat(10px);
+}
+.css[data-tooltip]:before {
+    @include tooltip_stat(85px); 
+}
+.php[data-tooltip]:before {
+    @include tooltip_stat(160px); 
+}
+.sql[data-tooltip]:before {
+    @include tooltip_stat(235px); 
+}
+.js[data-tooltip]:before {
+    @include tooltip_stat(310px); 
+}
 
+[data-tooltip]:hover:before {
+    opacity: 1;
+    /* customizable */
+    background: #fff;
+    margin-top: -75px;
+}
+
+//Section projets
 .project{
     z-index: 1000;
     text-align: center;
@@ -277,6 +256,7 @@ header{
     }
 }
 
+//Card
 .btn_card{
     padding: 5px 10px;
     border: none;
@@ -323,10 +303,11 @@ header{
     }
 }
 
+//Section contact
 .contact{    
     box-shadow: rgba($color: #000000, $alpha: 0.16) 0px 15px 20px inset;
     padding-bottom: 125px;
-    color: #111;
+    color: $primary_gray;
     background-color: #eee;
     h1{
         text-align: center;
@@ -408,8 +389,9 @@ header{
     } 
 }
 
+//Footer
 footer{
-    background-color: #111;
+    background-color: $primary_gray;
     height: 100px;
     display: flex;
     align-items: center;
@@ -435,27 +417,4 @@ footer{
             vertical-align: middle;
         }
     }
-}
-
-.html[data-tooltip]:before {
-    @include tooltip_stat(10px);
-}
-.css[data-tooltip]:before {
-    @include tooltip_stat(85px); 
-}
-.php[data-tooltip]:before {
-    @include tooltip_stat(160px); 
-}
-.sql[data-tooltip]:before {
-    @include tooltip_stat(235px); 
-}
-.js[data-tooltip]:before {
-    @include tooltip_stat(310px); 
-}
-
-[data-tooltip]:hover:before {
-    opacity: 1;
-    /* customizable */
-    background: #fff;
-    margin-top: -75px;
 }
