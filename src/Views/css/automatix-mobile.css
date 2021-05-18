@@ -19,53 +19,32 @@ header {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   height: 100vh;
 }
-
 .header__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
 .header__title h1 {
   font: 500 10rem Antonio, sans-serif;
 }
-
 .header__title .logo_premiere {
   max-width: 118px;
   max-height: 114px;
   margin-right: 33px;
 }
-
 .header p {
   margin: 10px 0 25px;
   font: 300 2.5rem "Roboto", sans-serif;
   letter-spacing: 3.5px;
   color: #909090;
 }
-
 .header .version {
   margin: 14px 0 0;
   font: 100 1.8rem "Roboto", sans-serif;
@@ -73,9 +52,7 @@ header {
 }
 
 .btn {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   font-family: "Roboto", sans-serif;
   background: #2463FF no-repeat padding-box;
   width: 200px;
@@ -92,12 +69,10 @@ header {
   font: 500 6rem "Roboto", sans-serif;
   letter-spacing: 6px;
 }
-
 .ambitious h3, .features h3 {
   font: 500 4rem "Roboto", sans-serif;
   letter-spacing: 5px;
 }
-
 .ambitious p, .features p {
   font: 300 1.7rem "Roboto", sans-serif;
   letter-spacing: 2.5px;
@@ -108,18 +83,10 @@ header {
   color: #fff;
   background-color: #292929;
   padding: 88px 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .ambitious p {
   text-align: center;
   margin: 44px 0;
@@ -129,49 +96,32 @@ header {
 .features {
   color: #fff;
   background-color: #161616;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding: 63px 10%;
 }
-
 .features h2 {
   grid-area: header;
   text-align: center;
   margin-bottom: 10px;
 }
-
 .features .text {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   text-align: center;
   width: 600px;
 }
-
 .features .text h3 {
   margin-bottom: 15px;
 }
-
 .features .btn {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
-
 .features img {
   margin: 20px 0;
   min-width: 300px;
   max-width: 500px;
   justify-self: flex-end;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }

@@ -1,0 +1,212 @@
+.panel {
+  background-color: #fff;
+  border-radius: 5px;
+}
+.panel table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.panel table thead tr {
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+.panel table thead td {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+}
+.panel table tbody tr {
+  transition: background 200ms;
+}
+.panel table tbody tr a {
+  padding: 0.5rem 1rem;
+  display: block;
+  color: #222;
+  font-size: 0.9rem;
+}
+.panel table tbody tr td:last-child {
+  display: flex;
+  align-items: center;
+}
+.panel table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background 200ms;
+}
+.panel__header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.panel__body {
+  padding: 1rem;
+}
+.panel__body.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel__body.img [type=file] {
+  display: none;
+}
+.panel__body .img__label {
+  position: relative;
+  display: block;
+  border: 1px solid #d9d9d9;
+  padding: 5px 8px;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #8390A2;
+  transition: border-color 200ms, color 200ms;
+}
+.panel__body .img__label::after {
+  content: "Browse";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: #059475;
+  padding: 5px 8px;
+  border-radius: 0 3px 3px 0;
+  transition: background 200ms;
+}
+.panel__body .img__label:hover {
+  border-color: #bfbfbf;
+  color: #586474;
+  transition: border-color 200ms, color 200ms;
+}
+.panel__body .img__label:hover::after {
+  background-color: #04765d;
+  transition: background 200ms;
+}
+.panel__body img {
+  display: block;
+  border-radius: 3px;
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.fields {
+  margin-bottom: 15px;
+}
+.fields label {
+  display: block;
+  font-weight: 700;
+}
+.fields input, .fields textarea {
+  font-size: 1rem;
+  padding: 5px 8px;
+  margin-top: 5px;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: border-color 300ms;
+}
+.fields input:focus, .fields textarea:focus {
+  border-color: rgba(6, 177, 140, 0.75);
+  transition: border-color 300ms;
+}
+.fields input {
+  width: 300px;
+}
+.fields textarea {
+  height: 200px;
+  width: 100%;
+  resize: none;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+.checkbox label {
+  margin-left: 10px;
+  background-color: #8390A2;
+  border: 1px solid #586474;
+  padding: 0.05rem 0.4rem;
+  border-radius: 25px;
+}
+.checkbox [for=html-css] {
+  background-color: rgba(53, 174, 204, 0.5);
+  border-color: #35aecc;
+}
+.checkbox [for=js] {
+  background-color: rgba(218, 221, 53, 0.5);
+  border-color: #dadd35;
+}
+.checkbox [for=jsx] {
+  background-color: rgba(22, 199, 243, 0.5);
+  border-color: #16c7f3;
+}
+.checkbox [for=php] {
+  background-color: rgba(46, 93, 196, 0.5);
+  border-color: #2e5dc4;
+}
+.checkbox [for=sql] {
+  background-color: rgba(170, 97, 29, 0.5);
+  border-color: #aa611d;
+}
+.checkbox [for=cpp] {
+  background-color: rgba(29, 67, 170, 0.5);
+  border-color: #1d43aa;
+}
+
+.btn {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: background 200ms;
+}
+.btn-default {
+  background-color: whitesmoke;
+  color: #1D2231;
+  border-color: #d9d9d9;
+  padding: 6px 12px;
+}
+.btn-default:hover {
+  background-color: #ededed;
+  color: #262626;
+  border-color: #bfbfbf;
+  transition: background 200ms;
+}
+.btn-primary {
+  background-color: #3c8ebe;
+  color: #fff;
+  border-color: #d9d9d9;
+  padding: 6px 12px;
+}
+.btn-primary:hover {
+  background-color: #367da6;
+  color: #fff;
+  border-color: #bfbfbf;
+  transition: background 200ms;
+}
+.btn-main {
+  background-color: #059475;
+  border-radius: 10px;
+  border: 1px solid #059475;
+}
+.btn-main[type=submit], .btn-main a {
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+.btn-main i {
+  margin-left: 5px;
+}
+.btn-main:hover {
+  background-color: #04765d;
+  transition: background 200ms;
+}
+
+.error {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f35239;
+}

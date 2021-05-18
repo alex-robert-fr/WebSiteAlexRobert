@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Robert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<?=$css?>alex-mobile.css">
-    <link rel="stylesheet" href="<?=$css?>alex-ordinateur.css">
+    <link rel="stylesheet" href="<?= $_SERVER['REQUEST_URI'] ?>src/Views/css/alex-mobile.css">
+    <link rel="stylesheet" href="<?= $_SERVER['REQUEST_URI'] ?>src/Views/css/alex-ordinateur.css">
 </head>
 
 <body>
@@ -92,9 +92,30 @@
     <section class="project">
         <h1>Mes projets</h1>
         <div class="cards">
-            <aside class="card">
+            <?php
+            foreach ($projects->getProjects() as $project) { ?>
+                <aside class="card">
+                    <div class="card__header">
+                        <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/<?=$project->img?>">
+                        <div class="card__header__tickets">
+                            <div class="card__header__tickets__php">PHP 7</div>
+                            <div class="card__header__tickets__js">JS</div>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <h2><?=$project->title?></h2>
+                        <p><?=$project->description?></p>
+                    </div>
+                    <div class="btn">
+                        <a class="btn_card btn__website" target="_blank" href="http://muscuplus.alexrobert.fr/">Muscuplus</a>
+                        <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/MuscuPlus"><i class="fa fa-github"></i>GitHub</a>
+                    </div>
+                </aside>
+            <?php }
+            ?>
+            <!-- <aside class="card">
                 <div class="card__header">
-                    <img class="card__header__img" src="<?php echo $img. 'img_muscuplus.jpg'; ?>">
+                    <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/img_muscuplus.jpg">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__php">PHP 7</div>
                         <div class="card__header__tickets__js">JS</div>
@@ -117,7 +138,7 @@
             </aside>
             <aside class="card">
                 <div class="card__header">
-                    <img class="card__header__img" src="<?php echo $img. 'img_premierepro.png'; ?>">
+                    <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/img_premierepro.png">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__js">JS</div>
                         <div class="card__header__tickets__jsx">JSX</div>
@@ -133,13 +154,13 @@
                     </p>
                 </div>
                 <div class="btn">
-                    <a class="btn_card btn__website" target="_blank" href="<?=$_SERVER['REQUEST_URI']?>Automatix">Automatix</a>
+                    <a class="btn_card btn__website" target="_blank" href="<?= $_SERVER['REQUEST_URI'] ?>Automatix">Automatix</a>
                     <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/Automatix"><i class="fa fa-github"></i>GitHub</a>
                 </div>
             </aside>
             <aside class="card">
                 <div class="card__header">
-                    <img class="card__header__img" src="<?php echo $img. 'img_passfilter.jpg'; ?>">
+                    <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/img_passfilter.jpg">
                     <div class="card__header__tickets">
                         <div class="card__header__tickets__cpp">C++</div>
                     </div>
@@ -155,7 +176,7 @@
                 <div class="btn">
                     <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/Passfilter"><i class="fa fa-github"></i>GitHub</a>
                 </div>
-            </aside>
+            </aside> -->
         </div>
     </section>
 
@@ -193,7 +214,7 @@
             <div class="submit_btn">
                 <label for="send">
                     <i class="fa fa-paper-plane"></i>
-                    <input type="submit" value="Envoyer" name="send" id="send">
+                    <input type="submit" value="Envoyer" name="sendMailContact" id="send">
                 </label>
             </div>
         </form>
@@ -213,9 +234,6 @@
             <li>
                 <i class="fa fa-phone"></i>
                 <a href="tel:+33 6 12 82 23 71">06 12 82 23 71</a>
-            </li>
-            <li>
-                <a href="#">Condition général de ventes</a>
             </li>
         </ul>
     </footer>

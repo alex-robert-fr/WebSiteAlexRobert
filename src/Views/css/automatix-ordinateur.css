@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 @media (max-width: 600px) {
   .features {
     padding: 63px 5%;
@@ -8,34 +6,33 @@
     width: 100%;
   }
 }
-
 @media (max-width: 1000px) {
   .ambitious {
     padding: 88px 5%;
   }
 }
-
 @media (min-width: 1400px) {
   /*Global*/
   body, header, h1, h2, h3, h4, h4, h6, p {
     margin: 0;
     padding: 0;
   }
+
   /*alexrobert.fr*/
   /*automatix*/
+  @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
   .features {
-    display: -ms-grid;
     display: grid;
-    grid-template: "header header" "markingText markingImage";
-    -webkit-column-gap: 175px;
-            column-gap: 175px;
+    grid-template: "header header" "markingText markingImage";
+    -moz-column-gap: 175px;
+         column-gap: 175px;
   }
   .features h2 {
     margin-bottom: 63px;
   }
   .features .text {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+    align-self: flex-start;
     text-align: left;
     width: 600px;
     grid-area: markingText;
@@ -45,8 +42,7 @@
   }
   .features .btn {
     grid-area: markingText;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     justify-self: flex-end;
   }
   .features img {

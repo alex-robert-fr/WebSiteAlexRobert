@@ -1,0 +1,223 @@
+@import 'adminTools.scss';
+
+//Panel
+.panel{
+    background-color: #fff;
+    border-radius: 5px;
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        thead{
+            tr{
+                border-top: 1px solid #f0f0f0;
+                border-bottom: 2px solid #f0f0f0;
+            }
+            td{
+                padding: .5rem 1rem;
+                font-weight: 700;
+            }
+        }
+        tbody{
+            tr{
+                transition: background 200ms;
+                a{
+                    padding: .5rem 1rem;
+                    display: block;
+                    color: #222;
+                    font-size: .9rem;
+                }
+                td:last-child{
+                    display: flex;
+                    align-items: center;
+                }
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.1);
+                    transition: background 200ms;
+                }
+            }
+        }
+    }
+    &__header{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f0f0f0;
+        
+    }
+    &__body{
+        padding: 1rem;
+        &.img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            [type=file]{
+                display: none;
+            }
+        }
+        .img__label{
+            position: relative;
+            display: block;
+            border: 1px solid $color-gray;
+            padding: 5px 8px;
+            font-weight: 500;
+            border-radius: 3px;
+            cursor: pointer;
+            color: $text-gray;
+            transition: border-color 200ms, color 200ms;
+            &::after{
+                content: 'Browse';
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: #fff;
+                background-color: $main-color;
+                padding: 5px 8px;
+                border-radius: 0 3px 3px 0;
+                transition: background 200ms;
+            }
+            &:hover{
+                border-color: $color-gray-active;
+                color: $text-gray-active;
+                transition: border-color 200ms, color 200ms;
+                &::after{
+                    background-color: $main-color-active;
+                    transition: background 200ms;
+                }
+            }
+        }
+        img{
+            display: block;
+            border-radius: 3px;
+            max-width: 400px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+//Formulaire
+.fields{
+    margin-bottom: 15px;
+    label{
+        display: block;
+        font-weight: 700;
+    }
+    input, textarea{
+        font-size: 1rem;
+        padding: 5px 8px;
+        margin-top: 5px;
+        outline: none;
+        border: 1px solid $color-gray;
+        border-radius: 3px;
+        box-sizing: border-box;
+        transition: border-color 300ms;
+        &:focus{
+            border-color: rgba($color: $main-color-disabled, $alpha: .75);
+            transition: border-color 300ms;
+        }
+    }
+    input{
+        width: 300px;
+    }
+    textarea{
+        height: 200px;
+        width: 100%;
+        resize: none;
+    }
+}
+
+.checkbox{
+    margin-bottom: 10px;
+    label{
+        margin-left: 10px;
+        background-color: $text-gray;
+        border: 1px solid $text-gray-active;
+        padding: .05rem .4rem;
+        border-radius: 25px;
+    }
+    [for=html-css]{
+        background-color: rgba($color: #35aecc, $alpha: .5);
+        border-color: rgba($color: #35aecc, $alpha: 1);
+    }
+    [for=js]{
+        background-color: rgba($color: #dadd35, $alpha: .5);
+        border-color: rgba($color: #dadd35, $alpha: 1);
+    }
+    [for=jsx]{
+        background-color: rgba($color: #16c7f3, $alpha: .5);
+        border-color: rgba($color: #16c7f3, $alpha: 1);
+    }
+    [for=php]{
+        background-color: rgba($color: #2e5dc4, $alpha: .5);
+        border-color: rgba($color: #2e5dc4, $alpha: 1);
+    }
+    [for=sql]{
+        background-color: rgba($color: #aa611d, $alpha: .5);
+        border-color: rgba($color: #aa611d, $alpha: 1);
+    }
+    [for=cpp]{
+        background-color: rgba($color: #1d43aa, $alpha: .5);
+        border-color: rgba($color: #1d43aa, $alpha: 1);
+    }
+}
+
+//Button
+.btn{
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    transition: background 200ms;
+    &-default{
+        background-color: $color-white;
+        color: $color-dark;
+        border-color: $color-gray;
+        padding: 6px 12px;
+        &:hover{
+            background-color: $color-white-active;
+            color: $color-dark-active;
+            border-color: $color-gray-active;
+            transition: background 200ms;
+        }
+    }
+    &-primary{
+        background-color: $color-primary;
+        color: #fff;
+        border-color: $color-gray;
+        padding: 6px 12px;
+        &:hover{
+            background-color: $color-primary-active;
+            color: #fff;
+            border-color: $color-gray-active;
+            transition: background 200ms;
+        }
+    }
+    &-main{
+        background-color: $main-color;
+        border-radius: 10px;
+        border: 1px solid $main-color;
+        &[type=submit], a{
+            display: block;
+            font-size: .8rem;
+            color: #fff;
+            padding: .5rem 1rem;
+        }
+        i{
+            margin-left: 5px;
+        }
+        &:hover{
+            background-color: $main-color-active;
+            transition: background 200ms;
+        }
+    }
+}
+
+//Error
+.error{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $color-danger-active;
+}
