@@ -19,32 +19,34 @@
                 <h3>My currents projects</h3>
                 <button class="btn btn-main"><a href="<?= $router->url('addProject') ?>">Add project <i class="fas fa-plus"></i></a></button>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Project Name</td>
-                        <td>Start Date</td>
-                        <td>Last modification</td>
-                        <td>Languages</td>
-                        <td>Status</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($projects->getProjects() as $project) {
-                        $url = $router->url('editProject', ['id' => $project->id]);
-                    ?>
+            <div class="mobile">
+                <table>
+                    <thead>
                         <tr>
-                            <td><a href="<?= $url ?>"><?= $project->title ?></td></a>
-                            <td><a href="<?= $url ?>">06 Sep 2020</td></a>
-                            <td><a href="<?= $url ?>">11 Sep 2020</td></a>
-                            <td><a href="<?= $url ?>"><?= $project->languages ?></td></a>
-                            <td><a href="<?= $url ?>"><?= $project->status ?></td></a>
+                            <td>Project Name</td>
+                            <td>Start Date</td>
+                            <td>Last modification</td>
+                            <td>Languages</td>
+                            <td>Status</td>
                         </tr>
-                    <?php }
-                    ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($projects->getProjects() as $project) {
+                            $url = $router->url('editProject', ['id' => $project->id]);
+                        ?>
+                            <tr>
+                                <td data-title="Project Name"><a href="<?= $url ?>"><?= $project->title ?></td></a>
+                                <td data-title="Start Date"><a href="<?= $url ?>">06 Sep 2020</td></a>
+                                <td data-title="Last Modification"><a href="<?= $url ?>">11 Sep 2020</td></a>
+                                <td data-title="Languages"><a href="<?= $url ?>"><?= $project->languages ?></td></a>
+                                <td data-title="Status"><a href="<?= $url ?>"><?= $project->status ?></td></a>
+                            </tr>
+                        <?php }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
     </div>
