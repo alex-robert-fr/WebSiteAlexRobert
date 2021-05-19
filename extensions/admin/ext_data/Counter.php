@@ -2,14 +2,19 @@
 
 namespace App\Extensions\Admin\Ext_data;
 
+use App\Core\Router\Router;
+
 class Counter
 {
+    private Router $router;
     private string $filePath;
     private  $objectJson;
 
     public function __construct(bool $initialize = true)
     {
-        $this->filePath = dirname(__DIR__).'/ext_data/views.json';
+        global $router;
+        $this->router = $router;
+        $this->filePath = $router->fileUrl('/Extensions/Admin/Ext_data/views.json', true);
         $this->objectJson = json_decode(file_get_contents($this->filePath));
 
         if($initialize){

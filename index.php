@@ -1,12 +1,12 @@
 <?php
 require_once 'vendor/autoload.php';
-
 use App\Core\Router\Router;
 
 $router = new Router($_GET['url']);
 
 $router->get('/', 'Home#show', 'home');
 $router->post('/', 'Home#sendMailContact');
+$router->get('/phpinfo', 'phpinfo#show');
 $router->get('/cgv', 'Cgv#show');
 $router->get('/Automatix', 'Automatix#show', 'automatix');
 $router->get('/admin', 'AdminConnexion#show');

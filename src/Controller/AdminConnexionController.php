@@ -9,11 +9,13 @@ class AdminConnexionController
 {
     public function show()
     {
+        global $router;
         require_once __DIR__.'/../Views/AdminConnexionView.php';
     }
 
     public function login()
     {
+        global $router;
         if(isset($_POST['login'])){
             try{                
                 if (empty($_POST['email'])) {

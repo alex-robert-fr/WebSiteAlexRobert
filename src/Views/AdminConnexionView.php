@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion | Admin</title>
-    <link rel="stylesheet" href="<?=str_replace($_GET['url'], '', $_SERVER['REQUEST_URI'])?>/src/Views/css/admin.css">
-    <link rel="stylesheet" href="<?=str_replace($_GET['url'], '', $_SERVER['REQUEST_URI'])?>/src/Views/css/admin-ui-elements.css">
+    <link rel="stylesheet" href="<?=$router->fileUrl('/Src/Views/css/admin.css')?>">
+    <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/admin-ui-elements.css') ?>">
 </head>
 
 <body id="login">

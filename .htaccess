@@ -1,9 +1,9 @@
-#<FilesMatch \.php$>
-#SetHandler application/x-httpd-php80
-#</FilesMatch>
-#AddHandler application/x-httpd-php80 .php
-
 RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+#<FilesMatch \.php$>
+#SetHandler application/x-httpd-php80
+#</FilesMatch>
+#AddHandler application/x-httpd-php80 .php

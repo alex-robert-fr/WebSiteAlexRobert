@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatix</title>
-    <link rel="stylesheet" href="<?=$css?>automatix-mobile.css">
-    <link rel="stylesheet" href="<?=$css?>automatix-ordinateur.css">
+    <link rel="stylesheet" href="<?=$router->fileUrl('/Src/Views/css/automatix-mobile.css')?>">
+    <link rel="stylesheet" href="<?=$router->fileUrl('/Src/Views/css/automatix-ordinateur.css')?>">
 </head>
 
 <body>

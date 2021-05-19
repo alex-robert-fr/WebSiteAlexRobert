@@ -9,12 +9,15 @@ class HomeController
 {
     public function show()
     {
+        global $router;
         $counter = new Counter();
         $projects = new Projects();
         require_once dirname(__DIR__) . '/Views/HomeView.php';
     }
     public function sendMailContact()
     {
+        global $router;
+        $projects = new Projects();
         require_once dirname(__DIR__) . '/Models/ContactForm.php';
 
         if (isset($_POST['sendMailContact'])) {

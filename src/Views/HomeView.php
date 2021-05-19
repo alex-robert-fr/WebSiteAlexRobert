@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Robert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<?= $_SERVER['REQUEST_URI'] ?>src/Views/css/alex-mobile.css">
-    <link rel="stylesheet" href="<?= $_SERVER['REQUEST_URI'] ?>src/Views/css/alex-ordinateur.css">
+    <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/alex-mobile.css') ?>">
+    <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/alex-ordinateur.css') ?>">
 </head>
 
 <body>
@@ -96,7 +96,7 @@
             foreach ($projects->getProjects() as $project) { ?>
                 <aside class="card">
                     <div class="card__header">
-                        <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/<?=$project->img?>">
+                        <img class="card__header__img" src="<?= $router->fileUrl('/Src/Views/img/') ?><?=$project->img?>">
                         <div class="card__header__tickets">
                             <div class="card__header__tickets__php">PHP 7</div>
                             <div class="card__header__tickets__js">JS</div>

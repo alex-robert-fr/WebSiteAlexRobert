@@ -13,17 +13,17 @@ class Router
         $this->url = $url;
     }
 
-    public function get(string $path, $callable, mixed $name = null)
+    public function get(string $path, $callable, $name = null)
     {
         return $this->add($path, $callable, $name, 'GET');
     }
 
-    public function post(string $path, $callable, mixed $name = null)
+    public function post(string $path, $callable, $name = null)
     {
         return $this->add($path, $callable, $name, 'POST');
     }
 
-    private function add(string $path, $callable, mixed $name, string $method)
+    private function add(string $path, $callable, $name, string $method)
     {
         $route = new Route($path, $callable);
         $this->routes[$method][] = $route;
@@ -55,5 +55,22 @@ class Router
             throw new RouterException('No route matches this name');
         }
         return str_replace($_GET['url'], '', $_SERVER['REQUEST_URI']) . $this->namedRoutes[$name]->getUrl($params);
+    }
+
+    public function fileUrl(string $path , bool $absolute = false)
+    {
+        if ($absolute === false) {
+            if ($_SERVER['SERVER_NAME'] === 'localhost') {
+                return '/site' . $path;
+            } elseif($_SERVER['SERVER_NAME'] === 'env-test.alexrobert.fr'){
+                return $path;
+            }
+        } else {
+            if ($_SERVER['SERVER_NAME'] === 'localhost') {
+                return dirname(dirname(__DIR__)) . $path;
+            } elseif($_SERVER['SERVER_NAME'] === 'env-test.alexrobert.fr'){
+                return $_SERVER['DOCUMENT_ROOT'].$path;
+            }   
+        }
     }
 }

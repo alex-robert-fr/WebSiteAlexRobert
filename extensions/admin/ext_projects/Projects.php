@@ -2,14 +2,21 @@
 
 namespace App\Extensions\Admin\Ext_projects;
 
+use App\Core\Router\Router;
+
 class Projects
 {
     private string $filePath;
     private  $objectJson;
+    private Router $router;
 
+    
     public function __construct()
     {
-        $this->filePath = dirname(__DIR__).'/ext_projects/projects.json';
+        global $router;
+        $this->router = $router;
+    
+        $this->filePath = $router->fileUrl('/Extensions/Admin/Ext_projects/projects.json', true);
         $this->objectJson = json_decode(file_get_contents($this->filePath));
     }
 

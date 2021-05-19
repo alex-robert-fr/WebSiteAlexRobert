@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<?= str_replace($_GET['url'], '', $_SERVER['REQUEST_URI']) ?>/src/Views/css/admin-ui-elements.css">
-    <link rel="stylesheet" href="<?= str_replace($_GET['url'], '', $_SERVER['REQUEST_URI']) ?>/src/Views/css/admin.css">
+    <link rel="stylesheet" href="<?=$router->fileUrl('/Src/Views/css/admin.css')?>">
+    <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/admin-ui-elements.css') ?>">
 </head>
 
 <body class="admin">
@@ -106,7 +106,7 @@
                     <div class="card__body">
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= str_replace('/admin/dashboard', '', $_SERVER['REQUEST_URI']) ?>/src/Views/img/marc.jpg" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= str_replace('/admin/dashboard', '', $_SERVER['REQUEST_URI']) ?>/src/Views/img/marc.jpg" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -134,7 +134,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= str_replace('/admin/dashboard', '', $_SERVER['REQUEST_URI']) ?>/src/Views/img/marc.jpg" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= str_replace('/admin/dashboard', '', $_SERVER['REQUEST_URI']) ?>/src/Views/img/marc.jpg" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= str_replace('/admin/dashboard', '', $_SERVER['REQUEST_URI']) ?>/src/Views/img/marc.jpg" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -176,7 +176,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= str_replace('/admin/dashboard', '', $_SERVER['REQUEST_URI']) ?>/src/Views/img/marc.jpg" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
