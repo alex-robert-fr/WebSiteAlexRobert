@@ -98,8 +98,12 @@
                     <div class="card__header">
                         <img class="card__header__img" src="<?= $router->fileUrl('/Src/Views/img/') ?><?=$project->img?>">
                         <div class="card__header__tickets">
-                            <div class="card__header__tickets__php">PHP 7</div>
-                            <div class="card__header__tickets__js">JS</div>
+                            <?php
+                            foreach (explode(',', $project->languages) as $language) { ?>
+                                <div class="card__header__tickets__<?=strtolower(str_replace('+', 'p', $language))?>"><?=$language?></div>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="card__body">
@@ -107,76 +111,23 @@
                         <p><?=$project->description?></p>
                     </div>
                     <div class="btn">
-                        <a class="btn_card btn__website" target="_blank" href="http://muscuplus.alexrobert.fr/">Muscuplus</a>
-                        <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/MuscuPlus"><i class="fa fa-github"></i>GitHub</a>
+                        <?php
+                            if (!empty($project->website)) { 
+                                if($project->insite){ ?>
+                                    <a class="btn_card btn__website" target="_blank" href="<?=$router->url($project->website)?>"><?=$project->title?></a>
+                                    <?php } else { ?>
+                                        <a class="btn_card btn__website" target="_blank" href="<?=$project->website?>"><?=$project->title?></a>
+                                    <?php }
+                                ?>
+                        <?php }
+                            if(!empty($project->github)){ ?>
+                                <a class="btn_card btn__github" target="_blank" href="<?=$project->github?>"><i class="fa fa-github"></i>GitHub</a>
+                        <?php }
+                        ?>
                     </div>
                 </aside>
             <?php }
             ?>
-            <!-- <aside class="card">
-                <div class="card__header">
-                    <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/img_muscuplus.jpg">
-                    <div class="card__header__tickets">
-                        <div class="card__header__tickets__php">PHP 7</div>
-                        <div class="card__header__tickets__js">JS</div>
-                    </div>
-                </div>
-                <div class="card__body">
-                    <h2>MuscuPlus</h2>
-                    <p>
-                        Voici Muscuplus,</br>
-                        Mon premier gros projet d'application web.</br>
-                        Le but de celle-ci étant d'avoir un suivie de ses activitées sportives.
-                        Ce projet me plaît énormément et c'est pour ca que je suis en train de
-                        développer une nouvelle version en ce moment.
-                    </p>
-                </div>
-                <div class="btn">
-                    <a class="btn_card btn__website" target="_blank" href="http://muscuplus.alexrobert.fr/">Muscuplus</a>
-                    <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/MuscuPlus"><i class="fa fa-github"></i>GitHub</a>
-                </div>
-            </aside>
-            <aside class="card">
-                <div class="card__header">
-                    <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/img_premierepro.png">
-                    <div class="card__header__tickets">
-                        <div class="card__header__tickets__js">JS</div>
-                        <div class="card__header__tickets__jsx">JSX</div>
-                    </div>
-                </div>
-                <div class="card__body">
-                    <h2>Automatix</h2>
-                    <p>
-                        Automatix est un projet qui m'est venu en tête lorsque
-                        je me suis rendu compte du temps que je perdais en montant mes vidéos.
-                        Cette extension a donc pour but de vous faciliter la vie et, à terme,
-                        de pouvoir automatiser tout ce qui pourrait être automatisable
-                    </p>
-                </div>
-                <div class="btn">
-                    <a class="btn_card btn__website" target="_blank" href="<?= $_SERVER['REQUEST_URI'] ?>Automatix">Automatix</a>
-                    <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/Automatix"><i class="fa fa-github"></i>GitHub</a>
-                </div>
-            </aside>
-            <aside class="card">
-                <div class="card__header">
-                    <img class="card__header__img" src="<?= $_SERVER['REQUEST_URI'] ?>src/Views/img/img_passfilter.jpg">
-                    <div class="card__header__tickets">
-                        <div class="card__header__tickets__cpp">C++</div>
-                    </div>
-                </div>
-                <div class="card__body">
-                    <h2>PassFilter</h2>
-                    <p>
-                        PassFilter est un système de filtrage de mot de passe sous Windows.
-                        Cela permet de définir une liste de mots interdits dans le mot de passe, ceci même si le
-                        langage geek est utilisé.
-                    </p>
-                </div>
-                <div class="btn">
-                    <a class="btn_card btn__github" target="_blank" href="https://github.com/AxDesign/Passfilter"><i class="fa fa-github"></i>GitHub</a>
-                </div>
-            </aside> -->
         </div>
     </section>
 

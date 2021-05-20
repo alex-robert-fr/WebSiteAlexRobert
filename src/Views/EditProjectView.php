@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<?=$router->fileUrl('/Src/Views/css/admin.css')?>">
+    <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/admin.css') ?>">
     <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/admin-ui-elements.css') ?>">
 </head>
 
@@ -22,7 +22,7 @@
                     </div>
                     <div class="panel__body img">
                         <form action="" method="post" enctype="multipart/form-data">
-                            <img src="<?= $router->fileUrl('/Src/Views/img/').$projects->img ?>" alt="">
+                            <img src="<?= $router->fileUrl('/Src/Views/img/') . $projects->img ?>" alt="">
                             <div class="fields">
                                 <label for="imgHeader" class="img__label">Choose file</label>
                                 <input type="file" name="imgHeader" id="imgHeader">
@@ -49,40 +49,50 @@
                         </form>
                     </div>
                 </div>
-                <!-- <div class="panel">
+                <div class="panel">
                     <div class="panel__header">
-                        <h3>More Information</h3>
+                        <h3>Languages</h3>
                     </div>
                     <div class="panel__body">
                         <form action="" method="post">
                             <div class="checkbox">
-                                <input type="checkbox" name="languages" id="html-css">
+                                <input type="checkbox" name="languages[]" value="HTML" id="html-css" <?= $checked = (in_array("HTML", $languages)) ? 'checked' : '' ?>>
                                 <label for="html-css">HTML/CSS</label>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="languages" id="js">    
+                                <input type="checkbox" name="languages[]" value="JS" id="js" <?= $checked = (in_array("JS", $languages)) ? 'checked' : '' ?>>
                                 <label for="js">Javascript</label>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="languages" id="jsx">
+                                <input type="checkbox" name="languages[]" value="JSX" id="jsx" <?= $checked = (in_array("JSX", $languages)) ? 'checked' : '' ?>>
                                 <label for="jsx">JSX</label>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="languages" id="php">    
+                                <input type="checkbox" name="languages[]" value="PHP" id="php" <?= $checked = (in_array("PHP", $languages)) ? 'checked' : '' ?>>
                                 <label for="php">PHP7/8</label>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="languages" id="sql">
+                                <input type="checkbox" name="languages[]" value="SQL" id="sql" <?= $checked = (in_array("SQL", $languages)) ? 'checked' : '' ?>>
                                 <label for="sql">MySQL</label>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="languages" id="cpp">
+                                <input type="checkbox" name="languages[]" value="C++" id="cpp" <?= $checked = (in_array("C++", $languages)) ? 'checked' : '' ?>>
                                 <label for="cpp">C++</label>
                             </div>
+                            <button type="submit" class="btn btn-main" name="languages-checked">Modifier</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel__header">
+                        <h3>Links</h3>
+                    </div>
+                    <div class="panel__body">
+                        <form action="" method="post">
                             <button type="submit" class="btn btn-main">Modifier</button>
                         </form>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </main>

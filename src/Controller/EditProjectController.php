@@ -13,11 +13,20 @@ class EditProjectController
         global $router;
         $projects = new Projects();
         $projects = $projects->getProjects($id);
+        $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+        $languages = $json->getTextInArray($id, 'languages');
         require_once __DIR__.'/../Views/EditProjectView.php';
     }
     public function edit($id)
     {
         global $router;
+        $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+        $languages = $json->getTextInArray($id, 'languages');
+
+        if(isset($_POST['languages-checked'])){
+            $implode = implode(',', $_POST['languages']);
+            $json->setText(strtoupper($implode), $id, 'languages');
+        }
 
         if(isset($_POST['editText'])){
             if(isset($_POST['title'])){

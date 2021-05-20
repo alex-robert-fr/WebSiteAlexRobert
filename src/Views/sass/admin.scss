@@ -276,7 +276,7 @@ main{
 // EDIT PROJECTS
 .edit_project{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
 }
 

@@ -221,6 +221,9 @@ header{
                     border-radius: 7px;
                     margin-left: 18px;
                 }
+                &__html{
+                    background-color: #ffa36e;
+                }
                 &__php{
                     background-color: #6E86FF;
                 }
@@ -232,6 +235,9 @@ header{
                 }
                 &__cpp{
                     background-color: #2732cf;
+                }
+                &__sql{
+                    background-color: #666666;
                 }
             }
         }

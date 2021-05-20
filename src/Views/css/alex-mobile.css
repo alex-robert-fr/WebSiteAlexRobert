@@ -443,6 +443,9 @@ header .manual-btn:hover {
   border-radius: 7px;
   margin-left: 18px;
 }
+.project .card__header__tickets__html {
+  background-color: #ffa36e;
+}
 .project .card__header__tickets__php {
   background-color: #6E86FF;
 }
@@ -454,6 +457,9 @@ header .manual-btn:hover {
 }
 .project .card__header__tickets__cpp {
   background-color: #2732cf;
+}
+.project .card__header__tickets__sql {
+  background-color: #666666;
 }
 .project .card__body {
   border-radius: 0 0 25px 25px;

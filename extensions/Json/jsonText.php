@@ -7,7 +7,7 @@ use App\Core\Router\Router;
 class jsonText
 {
     private string $jsonFilePath;
-    private $jsonObject;
+    public $jsonObject;
     private Router $router;
 
     public function __construct(string $jsonPath)
@@ -22,6 +22,10 @@ class jsonText
     {
         $text = $this->jsonObject->{$category}->{$name};
         return $text;
+    }
+    public function getTextInArray(string $category, string $name): array
+    {
+        return explode(',', $this->getText($category, $name));
     }
 
     public function setText(string $newText, string $category, string $name)

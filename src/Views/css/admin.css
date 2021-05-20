@@ -257,7 +257,7 @@ main .cards .card-single:last-child h1, main .cards .card-single:last-child div 
 
 .edit_project {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 2rem;
 }
 
