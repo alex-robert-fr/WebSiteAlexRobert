@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<?=$router->fileUrl('/Src/Views/css/admin.css')?>">
+    <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/admin.css') ?>">
     <link rel="stylesheet" href="<?= $router->fileUrl('/Src/Views/css/admin-ui-elements.css') ?>">
 </head>
 
@@ -15,11 +15,11 @@
     <?php require_once('includes/adminNav.php'); ?>
     <main>
         <div class="panel">
-            <div class="panel__header">
-                <h3>My currents projects</h3>
-                <button class="btn btn-main"><a href="<?= $router->url('addProject') ?>">Add project <i class="fas fa-plus"></i></a></button>
-            </div>
             <div class="mobile">
+                <div class="panel__header">
+                    <h3>My currents projects</h3>
+                    <button class="btn btn-main"><a href="<?= $router->url('addProject') ?>">Add project <i class="fas fa-plus"></i></a></button>
+                </div>
                 <table>
                     <thead>
                         <tr>

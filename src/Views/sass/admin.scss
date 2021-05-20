@@ -332,6 +332,10 @@ main{
 }
 
 @media only screen and (max-width: 600px){
+    main{
+        margin-top: 70px;
+        padding: 2rem 1rem;
+    }
     .admin{
         header{
             z-index: 300;

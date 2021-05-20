@@ -21,11 +21,11 @@ class EditProjectController
 
         if(isset($_POST['editText'])){
             if(isset($_POST['title'])){
-                $json = new jsonText(__DIR__.'/../../extensions/admin/ext_projects/projects.json');
+                $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
                 $json->setText($_POST['title'], $id, 'title');
             }
             if(isset($_POST['description'])){
-                $json = new jsonText(__DIR__.'/../../extensions/admin/ext_projects/projects.json');
+                $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
                 $json->setText($_POST['description'], $id, 'description');
             }
         }

@@ -2,6 +2,7 @@
 
 namespace App\Extensions\Admin\Ext_image_manager;
 
+use App\Core\Router\Router;
 use App\Extensions\Json\jsonText;
 use SplFileInfo;
 
@@ -11,12 +12,16 @@ class ImageManager
     private string $completeName;
     private string $name;
     private string $imgPath;
+    private Router $router;
 
     public function __construct($image, $post, $id)
     {
+        global $router;
+        $this->router = $router;
+
         $this->image = $image;
-        $this->imgPath = __DIR__.'/../../../src/Views/img/';
-        $json = new jsonText(__DIR__.'/../ext_projects/projects.json');
+        $this->imgPath = $router->fileUrl('/Src/Views/img/', true);
+        $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
 
         if ($image['error'] !== UPLOAD_ERR_OK) {
             throw new \Exception("Erreur de téléchargement");

@@ -38,6 +38,9 @@
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
 }
+.panel__header .btn {
+  margin-top: 0;
+}
 .panel__body {
   padding: 1rem;
 }
@@ -88,6 +91,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .mobile .panel__header {
+    border: none;
+  }
   .mobile table, .mobile thead, .mobile tbody, .mobile th, .mobile td, .mobile tr {
     display: block;
   }
@@ -97,12 +103,11 @@
     left: -9999px;
   }
   .mobile tr {
-    border: 1px solid #ccc;
-    margin-top: -1px;
+    border: 1px solid #e0e0e0;
+    margin: -1px 10px 0 10px;
   }
   .mobile td {
     border: none;
-    border-bottom: 1px solid #eee;
     position: relative;
     padding-left: 50%;
     white-space: normal;
@@ -118,6 +123,13 @@
     white-space: nowrap;
     text-align: left;
     font-weight: 600;
+  }
+
+  .panel-mobile > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .panel-mobile > div .panel__body img {
+    width: 100%;
   }
 }
 .fields {

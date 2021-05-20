@@ -14,74 +14,76 @@
 <body class="admin">
     <?php require_once('includes/adminNav.php'); ?>
     <main>
-        <div class="edit_project">
-            <div class="panel">
-                <div class="panel__header">
-                    <h3>Image header</h3>
+        <div class="panel-mobile">
+            <div class="edit_project">
+                <div class="panel">
+                    <div class="panel__header">
+                        <h3>Image header</h3>
+                    </div>
+                    <div class="panel__body img">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <img src="<?= $router->fileUrl('/Src/Views/img/').$projects->img ?>" alt="">
+                            <div class="fields">
+                                <label for="imgHeader" class="img__label">Choose file</label>
+                                <input type="file" name="imgHeader" id="imgHeader">
+                            </div>
+                            <button type="submit" class="btn btn-main" name="editImg">Modifier</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="panel__body img">
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <img src="<?= $router->fileUrl('/Src/Views/img/').$projects->img ?>" alt="">
-                        <div class="fields">
-                            <label for="imgHeader" class="img__label">Choose file</label>
-                            <input type="file" name="imgHeader" id="imgHeader">
-                        </div>
-                        <button type="submit" class="btn btn-main" name="editImg">Modifier</button>
-                    </form>
+                <div class="panel">
+                    <div class="panel__header">
+                        <h3>Project Info</h3>
+                    </div>
+                    <div class="panel__body">
+                        <form action="" method="post">
+                            <div class="fields">
+                                <label for="title">Title</label>
+                                <input type="text" name="title" id="title" placeholder="Title" value="<?= $projects->title ?>">
+                            </div>
+                            <div class="fields">
+                                <label for="description">Description</label>
+                                <textarea name="description" id="description" placeholder="Description"><?= $projects->description ?></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-main" name="editText">Modifier</button>
+                        </form>
+                    </div>
                 </div>
+                <!-- <div class="panel">
+                    <div class="panel__header">
+                        <h3>More Information</h3>
+                    </div>
+                    <div class="panel__body">
+                        <form action="" method="post">
+                            <div class="checkbox">
+                                <input type="checkbox" name="languages" id="html-css">
+                                <label for="html-css">HTML/CSS</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="languages" id="js">    
+                                <label for="js">Javascript</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="languages" id="jsx">
+                                <label for="jsx">JSX</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="languages" id="php">    
+                                <label for="php">PHP7/8</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="languages" id="sql">
+                                <label for="sql">MySQL</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="languages" id="cpp">
+                                <label for="cpp">C++</label>
+                            </div>
+                            <button type="submit" class="btn btn-main">Modifier</button>
+                        </form>
+                    </div>
+                </div> -->
             </div>
-            <div class="panel">
-                <div class="panel__header">
-                    <h3>Project Info</h3>
-                </div>
-                <div class="panel__body">
-                    <form action="" method="post">
-                        <div class="fields">
-                            <label for="title">Title</label>
-                            <input type="text" name="title" id="title" placeholder="Title" value="<?= $projects->title ?>">
-                        </div>
-                        <div class="fields">
-                            <label for="description">Description</label>
-                            <textarea name="description" id="description" placeholder="Description"><?= $projects->description ?></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-main" name="editText">Modifier</button>
-                    </form>
-                </div>
-            </div>
-            <!-- <div class="panel">
-                <div class="panel__header">
-                    <h3>More Information</h3>
-                </div>
-                <div class="panel__body">
-                    <form action="" method="post">
-                        <div class="checkbox">
-                            <input type="checkbox" name="languages" id="html-css">
-                            <label for="html-css">HTML/CSS</label>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="languages" id="js">    
-                            <label for="js">Javascript</label>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="languages" id="jsx">
-                            <label for="jsx">JSX</label>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="languages" id="php">    
-                            <label for="php">PHP7/8</label>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="languages" id="sql">
-                            <label for="sql">MySQL</label>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="languages" id="cpp">
-                            <label for="cpp">C++</label>
-                        </div>
-                        <button type="submit" class="btn btn-main">Modifier</button>
-                    </form>
-                </div>
-            </div> -->
         </div>
     </main>
     </div>

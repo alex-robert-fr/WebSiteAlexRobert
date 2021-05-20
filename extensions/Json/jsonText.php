@@ -2,15 +2,20 @@
 
 namespace App\Extensions\Json;
 
+use App\Core\Router\Router;
+
 class jsonText
 {
     private string $jsonFilePath;
     private $jsonObject;
+    private Router $router;
 
     public function __construct(string $jsonPath)
     {
-        $this->jsonFilePath = $jsonPath;
-        $this->jsonObject = json_decode(file_get_contents($jsonPath));
+        global $router;
+        $this->router = $router;
+        $this->jsonFilePath = $router->fileUrl($jsonPath, true);
+        $this->jsonObject = json_decode(file_get_contents($this->jsonFilePath));
     }
 
     public function getText(string $category, string $name)
