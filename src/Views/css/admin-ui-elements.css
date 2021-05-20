@@ -91,6 +91,14 @@
   margin-bottom: 15px;
 }
 
+@media only screen and (max-width: 900px) {
+  .panel-mobile > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .panel-mobile > div .panel__body img {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 600px) {
   .mobile .panel__header {
     border: none;
@@ -125,13 +133,6 @@
     text-align: left;
     font-weight: 600;
   }
-
-  .panel-mobile > div {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .panel-mobile > div .panel__body img {
-    width: 100%;
-  }
 }
 .fields {
   margin-bottom: 15px;
@@ -139,6 +140,15 @@
 .fields label {
   display: block;
   font-weight: 700;
+}
+.fields label.header {
+  background-color: rgba(5, 148, 117, 0.3);
+  border: 1px solid rgba(4, 118, 93, 0.15);
+  border-radius: 3px 3px 0 0;
+  padding: 6px 12px;
+}
+.fields label.header + input.allWidth {
+  width: 100%;
 }
 .fields input, .fields textarea {
   font-size: 1rem;
@@ -232,6 +242,7 @@
 }
 
 .btn {
+  display: inline-block;
   margin-top: 15px;
   font-weight: 400;
   font-size: 0.9rem;
@@ -253,6 +264,10 @@
   border-color: #bfbfbf;
   transition: background 200ms;
 }
+.btn-default-gray {
+  background-color: #d9d9d9;
+  border-color: #bfbfbf;
+}
 .btn-primary {
   background-color: #3c8ebe;
   color: #fff;
@@ -267,7 +282,7 @@
 }
 .btn-main {
   background-color: #059475;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid #059475;
 }
 .btn-main[type=submit], .btn-main a {

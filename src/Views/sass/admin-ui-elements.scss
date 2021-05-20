@@ -97,7 +97,16 @@
         }
     }
 }
-
+@media only screen and (max-width: 900px) {
+    .panel-mobile{
+        &>div{
+            grid-template-columns: repeat(1, 1fr);
+            .panel__body img{
+                width: 100%;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 600px){
     .mobile{
         .panel__header{
@@ -134,14 +143,6 @@
             }
         }
     }
-    .panel-mobile{
-        &>div{
-            grid-template-columns: repeat(1, 1fr);
-            .panel__body img{
-                width: 100%;
-            }
-        }
-    }
 }
 
 //Formulaire
@@ -150,6 +151,15 @@
     label{
         display: block;
         font-weight: 700;
+        &.header{
+            background-color: rgba($color: $main-color, $alpha: 0.3);
+            border: 1px solid rgba($color: $main-color-active, $alpha: 0.15);
+            border-radius: 3px 3px 0 0;
+            padding: 6px 12px;
+            +input.allWidth{
+                width: 100%;
+            }
+        }
     }
     input, textarea{
         font-size: 1rem;
@@ -244,6 +254,7 @@
 
 //Button
 .btn{
+    display: inline-block;
     margin-top: 15px;
     font-weight: 400;
     font-size: 0.9rem;
@@ -263,6 +274,10 @@
             border-color: $color-gray-active;
             transition: background 200ms;
         }
+        &-gray{
+            background-color: $color-gray;
+            border-color: $color-gray-active;
+        }
     }
     &-primary{
         background-color: $color-primary;
@@ -278,7 +293,7 @@
     }
     &-main{
         background-color: $main-color;
-        border-radius: 10px;
+        border-radius: 4px;
         border: 1px solid $main-color;
         &[type=submit], a{
             display: block;
@@ -294,6 +309,7 @@
             transition: background 200ms;
         }
     }
+
 }
 
 //Error

@@ -30,17 +30,23 @@ class EditProjectController
 
         if(isset($_POST['editText'])){
             if(isset($_POST['title'])){
-                $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
                 $json->setText($_POST['title'], $id, 'title');
             }
             if(isset($_POST['description'])){
-                $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
                 $json->setText($_POST['description'], $id, 'description');
             }
         }
 
         if (isset($_POST['editImg'])) {
             $img = new ImageManager($_FILES['imgHeader'], $_POST['editImg'], $id);
+        }
+        if(isset($_POST['links'])){
+            if (isset($_POST['linkWebsite'])) {
+                $json->setText($_POST['linkWebsite'], $id, 'website');
+            }
+            if (isset($_POST['linkGit'])) {
+                $json->setText($_POST['linkGit'], $id, 'github');
+            }
         }
 
         $projects = new Projects();

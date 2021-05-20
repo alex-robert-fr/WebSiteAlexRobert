@@ -89,7 +89,15 @@
                     </div>
                     <div class="panel__body">
                         <form action="" method="post">
-                            <button type="submit" class="btn btn-main">Modifier</button>
+                            <div class="fields">
+                                <label for="" class="header">Website</label>
+                                <input type="text" class="allWidth" name="linkWebsite" value="<?=$projects->website?>" placeholder="Empty">
+                            </div>
+                            <div class="fields">
+                                <label for="" class="header">Github</label>
+                                <input type="text" class="allWidth" name="linkGit" value="<?=$projects->github?>" placeholder="Empty">
+                            </div>
+                            <button type="submit" class="btn btn-main" name="links">Modifier</button>
                         </form>
                     </div>
                 </div>
