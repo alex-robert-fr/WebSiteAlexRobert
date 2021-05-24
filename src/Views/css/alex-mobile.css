@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/xtr6tty.css");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap");
 /*Global*/
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
@@ -646,4 +647,47 @@ footer li a {
 footer li .fa {
   font-size: 6rem;
   vertical-align: middle;
+}
+
+.bar {
+  z-index: 1000;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.bar__dashboard {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 40px;
+}
+.bar__dashboard button {
+  color: #fff;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 3rem;
+  cursor: pointer;
+  background-image: none;
+  border-radius: 3px;
+  background-color: #059475;
+  border: 1px solid #059475;
+  transition: background 200ms;
+  padding: 0;
+}
+.bar__dashboard button a, .bar__dashboard button[type=submit] {
+  padding: 0.5rem 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+.bar__dashboard button:hover {
+  background-color: #04765d;
+  transition: background 200ms;
 }

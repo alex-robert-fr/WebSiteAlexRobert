@@ -245,33 +245,12 @@ main{
 
 // RECENT PROJECTS
 .projects{
-    table{
-        td{
-            padding: 0;
-            .status{
-                display: inline-block;
-                height: 10px;
-                width: 10px;
-                border-radius: 50%;
-                margin-right: 1rem;
-            }
-        }
-    }
     .table-responsive{
         width: 100%;
         overflow-x: auto;
     }
 }
 
-.status.purple{
-    background-color: rebeccapurple;
-}
-.status.pink{
-    background-color: deeppink;
-}
-.status.orange{
-    background-color: orangered;
-}
 
 // EDIT PROJECTS
 .edit_project{

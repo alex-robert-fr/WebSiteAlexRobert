@@ -22,6 +22,7 @@ class AdminConnexionController
                     throw new \Exception("L'adresse email ne peu pas être vide !");
                 }
             } catch(Exception $e){
+                $_SESSION['admin'] = false;
                 $errorEmail = $e->getMessage();
             }
 
@@ -30,6 +31,7 @@ class AdminConnexionController
                     throw new \Exception("Le mot de passe ne peu pas être vide !");
                 }
             }catch(Exception $e){
+                $_SESSION['admin'] = false;
                 $errorPassword = $e->getMessage();
             }
 
@@ -37,12 +39,14 @@ class AdminConnexionController
                 if(!empty($_POST['email']) && !empty($_POST['password'])){
                     $login = new LoginAdmin($_POST['email'], $_POST['password']);
                     if($login->isValid()){
-                        header('location:'. $_SERVER['REQUEST_URI'] .'/dashboard');
+                        $_SESSION['admin'] = true;
+                        header('location:'. $router->url('dashboard'));
                     } else{
                         throw new \Exception("L'adresse email ou le mot de passe est faux !");
                     }
                 }
             }catch(Exception $e){
+                $_SESSION['admin'] = false;
                 $errorLogin = $e->getMessage();
             }
             require_once __DIR__.'/../Views/AdminConnexionView.php';

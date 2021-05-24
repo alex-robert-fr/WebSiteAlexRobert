@@ -83,7 +83,7 @@
                                             <td><a href="#"><?= $project->languages ?></a></td>
                                             <td>
                                                 <a href="#">
-                                                    <span class="status purple"></span>
+                                                    <span class="status <?=$status = ($project->status === 'finished') ? 'desactive' : 'active'?>"></span>
                                                     <?= $project->status ?>
                                                 </a>
                                             </td>
@@ -106,7 +106,7 @@
                     <div class="card__body">
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -134,7 +134,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>
@@ -176,7 +176,7 @@
                         </div>
                         <div class="customer">
                             <div class="info">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+                                <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
                                 <div>
                                     <h4>Lewis S. Cunningham</h4>
                                     <small>CEO Excerpt</small>

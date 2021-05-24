@@ -38,9 +38,12 @@
                             <tr>
                                 <td data-title="Project Name"><a href="<?= $url ?>"><?= $project->title ?></td></a>
                                 <td data-title="Start Date"><a href="<?= $url ?>">06 Sep 2020</td></a>
-                                <td data-title="Last Modification"><a href="<?= $url ?>">11 Sep 2020</td></a>
+                                <td data-title="Last Modification"><a href="<?= $url ?>"><?= $project->lastModified ?></td></a>
                                 <td data-title="Languages"><a href="<?= $url ?>"><?= $project->languages ?></td></a>
-                                <td data-title="Status"><a href="<?= $url ?>"><?= $project->status ?></td></a>
+                                <td data-title="Status"><a href="<?= $url ?>">
+                                        <span class="status <?= $status = ($project->status === 'finished') ? 'desactive' : 'active' ?>"></span>
+                                        <?= $project->status ?>
+                                </td></a>
                             </tr>
                         <?php }
                         ?>

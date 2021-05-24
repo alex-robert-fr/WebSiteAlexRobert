@@ -38,7 +38,7 @@
         </div>
 
         <div class="user-wrapper">
-            <img src="<?= $router->fileUrl('/Src/Views/img/'). 'marc.jpg'?>" width="40px" height="40px" alt="">
+            <img src="<?= $router->fileUrl('/Src/Views/img/'). 'photo_profil.jpg'?>" width="40px" height="40px" alt="">
             <div>
                 <h4>Alex Robert</h4>
                 <small class="small-profil">Super admin</small>

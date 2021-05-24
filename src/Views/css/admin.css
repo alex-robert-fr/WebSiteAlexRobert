@@ -228,31 +228,9 @@ main .cards .card-single:last-child h1, main .cards .card-single:last-child div 
   color: #059475;
 }
 
-.projects table td {
-  padding: 0;
-}
-.projects table td .status {
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
 .projects .table-responsive {
   width: 100%;
   overflow-x: auto;
-}
-
-.status.purple {
-  background-color: rebeccapurple;
-}
-
-.status.pink {
-  background-color: deeppink;
-}
-
-.status.orange {
-  background-color: orangered;
 }
 
 .edit_project {

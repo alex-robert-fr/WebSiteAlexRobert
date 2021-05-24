@@ -25,6 +25,10 @@ class HomeController
 
         require_once dirname(__DIR__) . '/Models/ContactForm.php';
 
+        if(isset($_POST['disconnection'])){
+            session_destroy();
+        }
+        
         if (isset($_POST['sendMailContact'])) {
             $contactForm = new \ContactForm(['name', 'lastname', 'subject', 'email', 'message']);
             if (!empty($contactForm->error)) {

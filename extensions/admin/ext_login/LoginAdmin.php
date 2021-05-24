@@ -2,6 +2,7 @@
 
 namespace App\Extensions\Admin\Ext_login;
 
+use App\Core\Router\Router;
 use App\Extensions\Json\jsonText;
 
 class LoginAdmin
@@ -13,10 +14,11 @@ class LoginAdmin
 
     public function __construct(string $email, string $password)
     {
+
         $this->email = $email;
         $this->password = $password;
 
-        $jsonText = new jsonText(__DIR__.'/login.json');
+        $jsonText = new jsonText('/Extensions/Admin/Ext_login/login.json');
         $this->emailHash = $jsonText->getText('admin', 'email');
         $this->passwordHash = $jsonText->getText('admin', 'password');
     }

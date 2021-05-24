@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php require_once('includes/adminBarSite.php'); ?>
     <!-- HEADER -->
     <header>
         <section class="slider">

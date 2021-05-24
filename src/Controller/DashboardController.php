@@ -10,8 +10,12 @@ class DashboardController
     public function show()
     {
         global $router;
-        $countAllView = new Counter(false);
-        $projects = new Projects();
-        require_once __DIR__ . '/../Views/DashboardView.php';
+        if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
+            $countAllView = new Counter(false);
+            $projects = new Projects();
+            require_once __DIR__ . '/../Views/DashboardView.php';
+        } else {
+            require_once __DIR__ . '/../Views/404.php';
+        }
     }
 }
