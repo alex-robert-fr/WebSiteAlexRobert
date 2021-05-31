@@ -47,14 +47,14 @@ class AddProjectController
                 if (isset($_POST['title'])) {
                     $title = $_POST['title'];
                 }
-                // if (isset($_POST['description'])) {
-                //     $json->setText($_POST['description'], $id, 'description');
-                // }
-                // if(isset($_POST['publish'])){
-                //     $json->setBool(true, $id, 'publish');
-                // } else {
-                //     $json->setBool(false, $id, 'publish');
-                // }
+                if (isset($_POST['description'])) {
+                    $description = $_POST['description'];
+                }
+                if(isset($_POST['publish'])){
+                    $publish = true;
+                } else {
+                    $publish = false;
+                }
                 $modified = true;
             }
 
