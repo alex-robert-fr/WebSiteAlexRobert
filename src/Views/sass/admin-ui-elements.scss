@@ -52,8 +52,6 @@
     &__body{
         padding: 1rem;
         &.img{
-            display: flex;
-            justify-content: center;
             align-items: center;
             [type=file]{
                 display: none;
