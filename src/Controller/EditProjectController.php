@@ -52,6 +52,7 @@ class EditProjectController
 
             if (isset($_POST['editImg'])) {
                 $img = new ImageManager($_FILES['imgHeader'], $_POST['editImg'], $id);
+                $json->setText("img_project_".$id.'.'.$img->getExtension(), $id, 'img');
                 $modified = true;
             }
             if (isset($_POST['links'])) {

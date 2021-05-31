@@ -44,8 +44,6 @@ class Projects
             $id = $project->id + 1;
         }
 
-        // $img = "img_project_0.jpg";
-
         $objProject = new stdClass;
         $objProject->id = $id;
         $objProject->img = '';
@@ -55,7 +53,7 @@ class Projects
         $objProject->insite = true;
         $objProject->website = '';
         $objProject->github = '';
-        $objProject->status = '';
+        $objProject->status = 'in progress';
         $objProject->description = $description;
         $objProject->publish = false;
         $this->objectJson->{$id} = $objProject;
