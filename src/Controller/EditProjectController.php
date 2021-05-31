@@ -12,7 +12,6 @@ class EditProjectController
     {
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
             global $router;
-            $edit = true;
             $projects = new Projects();
             $projects = $projects->getProjects($id);
             $json = new jsonText('/Config/projects.json');
@@ -24,7 +23,6 @@ class EditProjectController
     }
     public function edit($id)
     {
-        $edit = true;
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
             global $router;
             $modified = false;

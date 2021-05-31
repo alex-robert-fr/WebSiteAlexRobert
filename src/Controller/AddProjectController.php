@@ -11,7 +11,6 @@ class AddProjectController
     {
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
             global $router;
-            $edit = false;
             require_once __DIR__ . '/../Views/AddProjectView.php';
         } else {
             require_once __DIR__ . '/../Views/404.php';
@@ -20,7 +19,6 @@ class AddProjectController
 
     public function add()
     {
-        $edit = false;
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
             global $router;
             $modified = false;
