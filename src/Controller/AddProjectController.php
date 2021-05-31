@@ -3,6 +3,7 @@
 namespace App\Src\Controller;
 
 use App\Extensions\Admin\Ext_projects\Projects;
+use App\Extensions\Json\jsonText;
 
 class AddProjectController
 {
@@ -24,7 +25,16 @@ class AddProjectController
             global $router;
             $modified = false;
             $jsonProject = new Projects();
-            // $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+            $json = new jsonText('/Config/projects.json');
+            $title = '';
+            $languages = '';
+            $lastModified = '';
+            $insite = true;
+            $website = '';
+            $github = '';
+            $status = '';
+            $description = '';
+            $publish = false;
             // $languages = $json->getTextInArray($id, 'languages');
 
             // if (isset($_POST['languages-checked'])) {
@@ -33,20 +43,20 @@ class AddProjectController
             //     $modified = true;
             // }
 
-            // if (isset($_POST['editText'])) {
-            //     if (isset($_POST['title'])) {
-            //         $json->setText($_POST['title'], $id, 'title');
-            //     }
-            //     if (isset($_POST['description'])) {
-            //         $json->setText($_POST['description'], $id, 'description');
-            //     }
-            //     if(isset($_POST['publish'])){
-            //         $json->setBool(true, $id, 'publish');
-            //     } else {
-            //         $json->setBool(false, $id, 'publish');
-            //     }
-            //     $modified = true;
-            // }
+            if (isset($_POST['editText'])) {
+                if (isset($_POST['title'])) {
+                    $title = $_POST['title'];
+                }
+                // if (isset($_POST['description'])) {
+                //     $json->setText($_POST['description'], $id, 'description');
+                // }
+                // if(isset($_POST['publish'])){
+                //     $json->setBool(true, $id, 'publish');
+                // } else {
+                //     $json->setBool(false, $id, 'publish');
+                // }
+                $modified = true;
+            }
 
             // if (isset($_POST['editImg'])) {
             //     $img = new ImageManager($_FILES['imgHeader'], $_POST['editImg'], $id);
@@ -76,6 +86,7 @@ class AddProjectController
             //     $json->setText(date('d M Y - H:i'), $id, 'lastModified');
             // }
 
+            $jsonProject->createProject($title,$languages,$lastModified,$insite,$website,$github,$status,$description,$publish);
             require_once __DIR__ . '/../Views/AddProjectView.php';
         } else {
             require_once __DIR__ . '/../Views/404.php';

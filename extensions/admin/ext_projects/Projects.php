@@ -3,6 +3,7 @@
 namespace App\Extensions\Admin\Ext_projects;
 
 use App\Core\Router\Router;
+use App\Extensions\Json\jsonText;
 use stdClass;
 
 class Projects
@@ -46,6 +47,7 @@ class Projects
         // $img = "img_project_0.jpg";
 
         $objProject = new stdClass;
+        $objProject->id = $id;
         $objProject->title = $title;
         $objProject->languages = $languages;
         $objProject->lastModified = $lastModified;
@@ -55,9 +57,11 @@ class Projects
         $objProject->status = $status;
         $objProject->description = $description;
         $objProject->publish = $publish;
+        $this->objectJson->{$id} = $objProject;
 
-        echo '<pre>';
-        var_dump($objProject);
-        echo '</pre>';
+        $content = json_encode($this->objectJson);
+        $file = fopen($this->router->fileUrl('/Config/projects.json', true), "w");
+        fwrite($file, $content);
+        fclose($file);
     }
 }
