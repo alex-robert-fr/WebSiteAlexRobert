@@ -41,7 +41,7 @@ class jsonText
         $this->setFile($this->jsonFilePath, $jsonObject);
     }
 
-    private function setFile($filePath, $content)
+    public function setFile($filePath, $content)
     {        
         $content = json_encode($content);
         $file = fopen($filePath, "w");

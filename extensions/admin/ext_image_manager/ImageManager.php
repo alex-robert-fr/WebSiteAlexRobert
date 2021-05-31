@@ -39,7 +39,7 @@ class ImageManager
         }
     }
 
-    private function getExtension()
+    public function getExtension()
     {
         $ext = new SplFileInfo($this->image['name']);
         return $ext->getExtension();

@@ -3,6 +3,7 @@
 namespace App\Extensions\Admin\Ext_projects;
 
 use App\Core\Router\Router;
+use App\Extensions\Json\jsonText;
 use stdClass;
 
 class Projects
@@ -37,27 +38,29 @@ class Projects
         return $nbProjects;
     }
 
-    public function createProject(string $title = '', string $languages = '', string $lastModified = '', bool $insite = true , string $website = '', string $github = '', string $status = '', string $description = '', bool $publish = false, int $id = 0)
+    public function createProject(string $title = '', string $description = '')
     {
         foreach ($this->objectJson as $project) {
             $id = $project->id + 1;
         }
 
-        // $img = "img_project_0.jpg";
-
         $objProject = new stdClass;
+        $objProject->id = $id;
+        $objProject->img = '';
         $objProject->title = $title;
-        $objProject->languages = $languages;
-        $objProject->lastModified = $lastModified;
-        $objProject->insite = $insite;
-        $objProject->website = $website;
-        $objProject->github = $github;
-        $objProject->status = $status;
+        $objProject->languages = '';
+        $objProject->lastModified = '';
+        $objProject->insite = true;
+        $objProject->website = '';
+        $objProject->github = '';
+        $objProject->status = 'in progress';
         $objProject->description = $description;
-        $objProject->publish = $publish;
+        $objProject->publish = false;
+        $this->objectJson->{$id} = $objProject;
 
-        echo '<pre>';
-        var_dump($objProject);
-        echo '</pre>';
+        $content = json_encode($this->objectJson);
+        $file = fopen($this->router->fileUrl('/Config/projects.json', true), "w");
+        fwrite($file, $content);
+        fclose($file);
     }
 }

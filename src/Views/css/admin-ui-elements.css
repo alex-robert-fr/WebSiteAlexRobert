@@ -47,8 +47,6 @@
   padding: 1rem;
 }
 .panel__body.img {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 .panel__body.img [type=file] {

@@ -13,7 +13,33 @@
 
 <body class="admin">
     <?php require_once('includes/adminNav.php'); ?>
-    <?php require_once('includes/projectsEdit.php'); ?>
+    <main>
+        <div class="panel-mobile">
+            <div class="edit_project">
+                <div class="panels">
+                    <div class="panel">
+                        <div class="panel__header">
+                            <h3>Project Info</h3>
+                        </div>
+                        <div class="panel__body">
+                            <form action="" method="post">
+                                <div class="fields">
+                                    <label for="title">Title</label>
+                                    <input type="text" name="title" id="title" placeholder="Title">
+                                </div>
+                                <div class="fields">
+                                    <label for="description">Description</label>
+                                    <textarea name="description" id="description" placeholder="Description"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-main" name="editText">Modifier</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
 </body>
 
 </html>

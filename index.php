@@ -18,6 +18,7 @@ $router->get('/admin/projects', 'Projects#show', 'projects');
 $router->get('/admin/projects/edit-:id', 'EditProject#show', 'editProject');
 $router->post('/admin/projects/edit-:id', 'EditProject#edit');
 $router->get('/admin/projects/add', 'AddProject#show', 'addProject');
+$router->post('/admin/projects/add', 'AddProject#add');
 
 
 
