@@ -48,6 +48,7 @@ class Projects
 
         $objProject = new stdClass;
         $objProject->id = $id;
+        $objProject->img = '';
         $objProject->title = $title;
         $objProject->languages = '';
         $objProject->lastModified = '';

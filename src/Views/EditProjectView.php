@@ -23,7 +23,11 @@
                         </div>
                         <div class="panel__body img">
                             <form action="" method="post" enctype="multipart/form-data">
-                                <img src="<?= $router->fileUrl('/Src/Views/img/') . $projects->img ?>" alt="">
+                                <?php
+                                if ($projects->img !== '') {
+                                ?>
+                                    <img src="<?= $router->fileUrl('/Src/Views/img/') . $projects->img ?>" alt="">
+                                <?php } ?>
                                 <div class="fields">
                                     <label for="imgHeader" class="img__label">Choose file</label>
                                     <input type="file" name="imgHeader" id="imgHeader">
