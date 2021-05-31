@@ -79,7 +79,7 @@
                                     <?php
                                     foreach ($projects->getProjects() as $project) { ?>
                                         <tr>
-                                            <td><a href="#"><?= $project->title ?></a></td>
+                                            <td><a href="#"><?= $project->title ?> <span class="error italic"><?=$draft = ($project->publish) ? '' : '[ Draft ]'?></span></a></td>
                                             <td><a href="#"><?= $project->languages ?></a></td>
                                             <td>
                                                 <a href="#">
