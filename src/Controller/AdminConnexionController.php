@@ -23,6 +23,7 @@ class AdminConnexionController
                 }
             } catch(Exception $e){
                 $_SESSION['admin'] = false;
+                session_write_close();
                 $errorEmail = $e->getMessage();
             }
 
@@ -32,6 +33,7 @@ class AdminConnexionController
                 }
             }catch(Exception $e){
                 $_SESSION['admin'] = false;
+                session_write_close();
                 $errorPassword = $e->getMessage();
             }
 
@@ -40,6 +42,7 @@ class AdminConnexionController
                     $login = new LoginAdmin($_POST['email'], $_POST['password']);
                     if($login->isValid()){
                         $_SESSION['admin'] = true;
+                session_write_close();
                         header('location:'. $router->url('dashboard'));
                     } else{
                         throw new \Exception("L'adresse email ou le mot de passe est faux !");
@@ -47,6 +50,7 @@ class AdminConnexionController
                 }
             }catch(Exception $e){
                 $_SESSION['admin'] = false;
+                session_write_close();
                 $errorLogin = $e->getMessage();
             }
             require_once __DIR__.'/../Views/AdminConnexionView.php';

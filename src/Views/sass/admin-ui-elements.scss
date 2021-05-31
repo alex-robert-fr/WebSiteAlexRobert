@@ -407,6 +407,9 @@
     font-size: 0.75rem;
     font-weight: 600;
     color: $color-danger-active;
+    &.italic{
+        font-style: oblique;
+    }
 }
 
 //Satus

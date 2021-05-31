@@ -18,7 +18,7 @@ class LoginAdmin
         $this->email = $email;
         $this->password = $password;
 
-        $jsonText = new jsonText('/Extensions/Admin/Ext_login/login.json');
+        $jsonText = new jsonText('/Config/login.json');
         $this->emailHash = $jsonText->getText('admin', 'email');
         $this->passwordHash = $jsonText->getText('admin', 'password');
     }

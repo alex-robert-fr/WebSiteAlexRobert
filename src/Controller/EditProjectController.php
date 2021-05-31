@@ -12,9 +12,10 @@ class EditProjectController
     {
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
             global $router;
+            $edit = true;
             $projects = new Projects();
             $projects = $projects->getProjects($id);
-            $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+            $json = new jsonText('/Config/projects.json');
             $languages = $json->getTextInArray($id, 'languages');
             require_once __DIR__ . '/../Views/EditProjectView.php';
         } else {
@@ -23,10 +24,11 @@ class EditProjectController
     }
     public function edit($id)
     {
+        $edit = true;
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
             global $router;
             $modified = false;
-            $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+            $json = new jsonText('/Config/projects.json');
             $languages = $json->getTextInArray($id, 'languages');
 
             if (isset($_POST['languages-checked'])) {
@@ -41,6 +43,11 @@ class EditProjectController
                 }
                 if (isset($_POST['description'])) {
                     $json->setText($_POST['description'], $id, 'description');
+                }
+                if(isset($_POST['publish'])){
+                    $json->setBool(true, $id, 'publish');
+                } else {
+                    $json->setBool(false, $id, 'publish');
                 }
                 $modified = true;
             }
@@ -70,7 +77,7 @@ class EditProjectController
             $projects = new Projects();
             $projects = $projects->getProjects($id);
             if($modified){
-                $json->setText(date('d M Y - h:i'), $id, 'lastModified');
+                $json->setText(date('d M Y - H:i'), $id, 'lastModified');
             }
 
             require_once __DIR__ . '/../Views/EditProjectView.php';

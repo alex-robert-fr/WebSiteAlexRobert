@@ -13,7 +13,7 @@ class HomeController
         global $router;
         $counter = new Counter();
         $projects = new Projects();
-        $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+        $json = new jsonText('/Config/projects.json');
         $json = $json->jsonObject;
         require_once dirname(__DIR__) . '/Views/HomeView.php';
     }
@@ -21,7 +21,7 @@ class HomeController
     {
         global $router;
         $projects = new Projects();
-        $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+        $json = new jsonText('/Config/projects.json');
 
         require_once dirname(__DIR__) . '/Models/ContactForm.php';
 

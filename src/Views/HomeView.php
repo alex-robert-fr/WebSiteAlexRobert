@@ -94,41 +94,42 @@
         <h1>Mes projets</h1>
         <div class="cards">
             <?php
-            foreach ($projects->getProjects() as $project) { ?>
-                <aside class="card">
-                    <div class="card__header">
-                        <img class="card__header__img" src="<?= $router->fileUrl('/Src/Views/img/') ?><?=$project->img?>">
-                        <div class="card__header__tickets">
+            foreach ($projects->getProjects() as $project) {
+                if ($project->publish) { ?>
+                    <aside class="card">
+                        <div class="card__header">
+                            <img class="card__header__img" src="<?= $router->fileUrl('/Src/Views/img/') ?><?= $project->img ?>">
+                            <div class="card__header__tickets">
+                                <?php
+                                foreach (explode(',', $project->languages) as $language) { ?>
+                                    <div class="card__header__tickets__<?= strtolower(str_replace('+', 'p', $language)) ?>"><?= $language ?></div>
+                                <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="card__body">
+                            <h2><?= $project->title ?></h2>
+                            <p><?= $project->description ?></p>
+                        </div>
+                        <div class="btn">
                             <?php
-                            foreach (explode(',', $project->languages) as $language) { ?>
-                                <div class="card__header__tickets__<?=strtolower(str_replace('+', 'p', $language))?>"><?=$language?></div>
-                            <?php
-                            }
+                            if (!empty($project->website)) {
+                                if ($project->insite) { ?>
+                                    <a class="btn_card btn__website" target="_blank" href="<?= $router->url($project->website) ?>"><?= $project->title ?></a>
+                                <?php } else { ?>
+                                    <a class="btn_card btn__website" target="_blank" href="<?= $project->website ?>"><?= $project->title ?></a>
+                                <?php }
+                                ?>
+                            <?php }
+                            if (!empty($project->github)) { ?>
+                                <a class="btn_card btn__github" target="_blank" href="<?= $project->github ?>"><i class="fa fa-github"></i>GitHub</a>
+                            <?php }
                             ?>
                         </div>
-                    </div>
-                    <div class="card__body">
-                        <h2><?=$project->title?></h2>
-                        <p><?=$project->description?></p>
-                    </div>
-                    <div class="btn">
-                        <?php
-                            if (!empty($project->website)) { 
-                                if($project->insite){ ?>
-                                    <a class="btn_card btn__website" target="_blank" href="<?=$router->url($project->website)?>"><?=$project->title?></a>
-                                    <?php } else { ?>
-                                        <a class="btn_card btn__website" target="_blank" href="<?=$project->website?>"><?=$project->title?></a>
-                                    <?php }
-                                ?>
-                        <?php }
-                            if(!empty($project->github)){ ?>
-                                <a class="btn_card btn__github" target="_blank" href="<?=$project->github?>"><i class="fa fa-github"></i>GitHub</a>
-                        <?php }
-                        ?>
-                    </div>
-                </aside>
+                    </aside>
             <?php }
-            ?>
+            } ?>
         </div>
     </section>
 

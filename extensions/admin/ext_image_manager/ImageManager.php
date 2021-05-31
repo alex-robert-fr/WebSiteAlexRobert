@@ -21,7 +21,7 @@ class ImageManager
 
         $this->image = $image;
         $this->imgPath = $router->fileUrl('/Src/Views/img/', true);
-        $json = new jsonText('/Extensions/Admin/Ext_projects/projects.json');
+        $json = new jsonText('/Config/projects.json');
 
         if ($image['error'] !== UPLOAD_ERR_OK) {
             throw new \Exception("Erreur de téléchargement");

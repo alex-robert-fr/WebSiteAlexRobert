@@ -2,14 +2,14 @@
     "name": "root/router",
     "authors": [
         {
-            "name": "AlexRobert",
+            "name": "Alex Robert",
             "email": "contact.alexrobert04@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "."
-        }
+	    "App\\": "./"
+	}
     },
     "require": {}
 }

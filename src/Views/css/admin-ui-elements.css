@@ -391,6 +391,9 @@
   font-weight: 600;
   color: #f35239;
 }
+.error.italic {
+  font-style: oblique;
+}
 
 table td {
   padding: 0;

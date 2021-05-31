@@ -62,13 +62,13 @@ class Router
         if ($absolute === false) {
             if ($_SERVER['SERVER_NAME'] === 'localhost') {
                 return '/site' . $path;
-            } elseif($_SERVER['SERVER_NAME'] === 'env-test.alexrobert.fr'){
+            } elseif($_SERVER['SERVER_NAME'] === SERV_NAME){
                 return $path;
             }
         } else {
             if ($_SERVER['SERVER_NAME'] === 'localhost') {
                 return dirname(dirname(__DIR__)) . $path;
-            } elseif($_SERVER['SERVER_NAME'] === 'env-test.alexrobert.fr'){
+            } elseif($_SERVER['SERVER_NAME'] === SERV_NAME){
                 return $_SERVER['DOCUMENT_ROOT'].$path;
             }   
         }

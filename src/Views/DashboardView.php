@@ -37,8 +37,8 @@
 
             <div class="card-single">
                 <div>
-                    <h1>124</h1>
-                    <span>Orders</span>
+                    <h1><?=$countAllView->getUniquesViewers()?></h1>
+                    <span>Uniques Viewers</span>
                 </div>
                 <div>
                     <i class="fas fa-tachometer-alt"></i>

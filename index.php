@@ -1,7 +1,7 @@
 <?php
 session_start();
-
 require_once 'vendor/autoload.php';
+require_once 'Config/serv-config.php';
 use App\Core\Router\Router;
 
 $router = new Router($_GET['url']);

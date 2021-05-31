@@ -34,6 +34,12 @@ class jsonText
         $jsonObject->{$category}->{$name} = $newText;
         $this->setFile($this->jsonFilePath, $jsonObject);
     }
+    public function setBool(bool $newText, string $category, string $name)
+    {
+        $jsonObject = $this->jsonObject;
+        $jsonObject->{$category}->{$name} = $newText;
+        $this->setFile($this->jsonFilePath, $jsonObject);
+    }
 
     private function setFile($filePath, $content)
     {        

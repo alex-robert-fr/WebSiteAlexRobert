@@ -36,7 +36,7 @@
                             $url = $router->url('editProject', ['id' => $project->id]);
                         ?>
                             <tr>
-                                <td data-title="Project Name"><a href="<?= $url ?>"><?= $project->title ?></td></a>
+                                <td data-title="Project Name"><a href="<?= $url ?>"><?= $project->title ?> <span class="error italic"><?=$draft = ($project->publish) ? '' : '[ Draft ]'?></span></td></a>
                                 <td data-title="Start Date"><a href="<?= $url ?>">06 Sep 2020</td></a>
                                 <td data-title="Last Modification"><a href="<?= $url ?>"><?= $project->lastModified ?></td></a>
                                 <td data-title="Languages"><a href="<?= $url ?>"><?= $project->languages ?></td></a>
