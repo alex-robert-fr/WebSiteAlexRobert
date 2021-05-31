@@ -38,7 +38,7 @@ class Projects
         return $nbProjects;
     }
 
-    public function createProject(string $title = '', string $languages = '', string $lastModified = '', bool $insite = true , string $website = '', string $github = '', string $status = '', string $description = '', bool $publish = false, int $id = 0)
+    public function createProject(string $title = '', string $description = '')
     {
         foreach ($this->objectJson as $project) {
             $id = $project->id + 1;
@@ -49,14 +49,14 @@ class Projects
         $objProject = new stdClass;
         $objProject->id = $id;
         $objProject->title = $title;
-        $objProject->languages = $languages;
-        $objProject->lastModified = $lastModified;
-        $objProject->insite = $insite;
-        $objProject->website = $website;
-        $objProject->github = $github;
-        $objProject->status = $status;
+        $objProject->languages = '';
+        $objProject->lastModified = '';
+        $objProject->insite = true;
+        $objProject->website = '';
+        $objProject->github = '';
+        $objProject->status = '';
         $objProject->description = $description;
-        $objProject->publish = $publish;
+        $objProject->publish = false;
         $this->objectJson->{$id} = $objProject;
 
         $content = json_encode($this->objectJson);
