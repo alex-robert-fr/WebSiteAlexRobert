@@ -43,6 +43,13 @@
 .panel__header .btn {
   margin-top: 0;
 }
+.panel__footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #f0f0f0;
+}
 .panel__body {
   padding: 1rem;
 }
@@ -375,6 +382,24 @@
 }
 .btn-main:hover {
   background-color: #04765d;
+  transition: background 200ms;
+}
+.btn-danger {
+  background-color: #f56b56;
+  border-radius: 4px;
+  border: 1px solid #f56b56;
+}
+.btn-danger[type=submit], .btn-danger a {
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+.btn-danger i {
+  margin-left: 5px;
+}
+.btn-danger:hover {
+  background-color: #f35239;
   transition: background 200ms;
 }
 .btn.inline {

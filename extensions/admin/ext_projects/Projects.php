@@ -63,4 +63,15 @@ class Projects
         fwrite($file, $content);
         fclose($file);
     }
+
+    public function deleteProject(array $ids)
+    {
+        foreach ($ids as $id) {
+            unset($this->objectJson->{$id});
+        }
+        $content = json_encode($this->objectJson);
+        $file = fopen($this->router->fileUrl('/Config/projects.json', true), "w");
+        fwrite($file, $content);
+        fclose($file);
+    }
 }

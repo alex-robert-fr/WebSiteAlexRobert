@@ -15,6 +15,7 @@ $router->get('/admin', 'AdminConnexion#show');
 $router->post('/admin', 'AdminConnexion#login');
 $router->get('/admin/dashboard', 'Dashboard#show', 'dashboard');
 $router->get('/admin/projects', 'Projects#show', 'projects');
+$router->post('/admin/projects', 'Projects#editTable');
 $router->get('/admin/projects/edit-:id', 'EditProject#show', 'editProject');
 $router->post('/admin/projects/edit-:id', 'EditProject#edit');
 $router->get('/admin/projects/add', 'AddProject#show', 'addProject');

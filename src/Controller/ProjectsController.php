@@ -16,4 +16,19 @@ class ProjectsController
             require_once __DIR__ . '/../Views/404.php';
         }
     }
+    
+    public function editTable()
+    {
+        global $router;
+        $projects = new Projects();
+        if(isset($_POST['edit'])){
+            $projects->deleteProject($_POST['edit']);
+        }
+        if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
+            $projects = new Projects();
+            require_once __DIR__ . '/../Views/ProjectsView.php';
+        } else {
+            require_once __DIR__ . '/../Views/404.php';
+        }
+    }
 }
