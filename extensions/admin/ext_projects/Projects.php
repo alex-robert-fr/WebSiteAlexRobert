@@ -67,6 +67,7 @@ class Projects
     public function deleteProject(array $ids)
     {
         foreach ($ids as $id) {
+            unlink($this->router->fileUrl('/Src/Views/img/'.$this->objectJson->{$id}->img, true));
             unset($this->objectJson->{$id});
         }
         $content = json_encode($this->objectJson);
