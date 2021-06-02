@@ -203,7 +203,7 @@
 
             <li>
                 <i class="fa fa-book"></i>
-                <a href="#">Condition général de vente</a>
+                <a href="<?=$router->url('cgv')?>">Condition général de vente</a>
             </li>
         </ul>
     </footer>

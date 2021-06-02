@@ -9,7 +9,7 @@ $router = new Router($_GET['url']);
 $router->get('/', 'Home#show', 'home');
 $router->post('/', 'Home#sendMailContact');
 $router->get('/phpinfo', 'phpinfo#show');
-$router->get('/cgv', 'Cgv#show');
+$router->get('/cgv', 'Cgv#show', 'cgv');
 $router->get('/Automatix', 'Automatix#show', 'automatix');
 $router->get('/admin', 'AdminConnexion#show');
 $router->post('/admin', 'AdminConnexion#login');
