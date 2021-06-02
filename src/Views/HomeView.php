@@ -188,7 +188,7 @@
         <ul>
             <li>
                 <i class="fa fa-github"></i>
-                <a href="https://github.com/AxDesign">AxDesign</a>
+                <a href="https://github.com/alex-robert-fr/">alex-robert-fr</a>
             </li>
 
             <li>
@@ -199,6 +199,11 @@
             <li>
                 <i class="fa fa-phone"></i>
                 <a href="tel:+33 6 12 82 23 71">06 12 82 23 71</a>
+            </li>
+
+            <li>
+                <i class="fa fa-book"></i>
+                <a href="#">Condition général de vente</a>
             </li>
         </ul>
     </footer>
