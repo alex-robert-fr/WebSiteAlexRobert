@@ -35,9 +35,32 @@ h2 {
   font-size: 2.4rem;
 }
 
+.cgv {
+  margin: auto;
+  width: 50%;
+}
+.cgv ol {
+  font-weight: 600;
+  font-size: 5rem;
+}
+.cgv ol h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cgv ol p, .cgv ol a, .cgv ol ul {
+  font-weight: 400;
+  font-size: 3rem;
+}
+.cgv ol > li {
+  margin-bottom: 50px;
+}
+
 header {
   color: #fff;
   background-color: #191919;
+}
+header > h1 {
+  text-align: center;
 }
 header .navigation-manual {
   z-index: 1000;

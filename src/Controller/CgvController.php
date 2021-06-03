@@ -6,6 +6,6 @@ class CgvController
 {
     public function show(){
         global $router;
-        echo "Condition général de ventes";
+        require_once __DIR__.'/../Views/CgvView.php';
     }
 }

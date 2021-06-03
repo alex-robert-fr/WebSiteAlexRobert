@@ -28,10 +28,33 @@ h2{
     font-size: $font_size_little;
 }
 
+.cgv{
+    margin: auto;
+    width: 50%;
+    ol{
+        font-weight: 600;
+        font-size: 5rem;
+        h2{
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p, a, ul{
+            font-weight: 400;
+            font-size: 3rem;
+        }
+        >li{
+            margin-bottom: 50px;
+        }
+    }
+}
+
 //Header
 header{
     color: #fff;
     background-color: $primary_gray;
+    >h1{
+        text-align: center;
+    }
     .navigation-manual{
         z-index: 1000;
         display: block;
