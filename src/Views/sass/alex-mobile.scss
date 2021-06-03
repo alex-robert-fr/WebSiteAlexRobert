@@ -41,9 +41,13 @@ h2{
         p, a, ul{
             font-weight: 400;
             font-size: 3rem;
+            color: rgba($color: #000000, $alpha: 0.75);
         }
         >li{
             margin-bottom: 50px;
+            .margin>p{
+                margin: 20px 0;
+            }
         }
     }
 }

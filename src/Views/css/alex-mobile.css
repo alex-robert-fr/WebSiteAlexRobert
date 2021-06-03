@@ -50,9 +50,13 @@ h2 {
 .cgv ol p, .cgv ol a, .cgv ol ul {
   font-weight: 400;
   font-size: 3rem;
+  color: rgba(0, 0, 0, 0.75);
 }
 .cgv ol > li {
   margin-bottom: 50px;
+}
+.cgv ol > li .margin > p {
+  margin: 20px 0;
 }
 
 header {

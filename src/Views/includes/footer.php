@@ -17,7 +17,12 @@
 
         <li>
             <i class="fa fa-book"></i>
-            <a href="<?= $router->url('cgv') ?>">Condition général de vente</a>
+            <a href="<?= $router->url('mentions') ?>">Mentions légales</a>
+        </li>
+        <li>
+        
+            <i class="fa fa-book"></i>
+            <a href="<?= $router->url('cgv') ?>">Conditions générals de ventes</a>
         </li>
     </ul>
 </footer>
