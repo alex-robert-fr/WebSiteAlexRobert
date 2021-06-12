@@ -16,39 +16,46 @@
     <main>
         <div class="panel">
             <div class="mobile">
-                <div class="panel__header">
-                    <h3>My currents projects</h3>
-                    <button class="btn btn-main"><a href="<?= $router->url('addProject') ?>">Add project <i class="fas fa-plus"></i></a></button>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Project Name</td>
-                            <td>Start Date</td>
-                            <td>Last modification</td>
-                            <td>Languages</td>
-                            <td>Status</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        foreach ($projects->getProjects() as $project) {
-                            $url = $router->url('editProject', ['id' => $project->id]);
-                        ?>
+                <form action="" method="post">
+                    <div class="panel__header">
+                        <h3>My currents projects</h3>
+                        <button class="btn btn-main"><a href="<?= $router->url('addProject') ?>">Add project <i class="fas fa-plus"></i></a></button>
+                    </div>
+                    <table>
+                        <thead>
                             <tr>
-                                <td data-title="Project Name"><a href="<?= $url ?>"><?= $project->title ?> <span class="error italic"><?=$draft = ($project->publish) ? '' : '[ Draft ]'?></span></td></a>
-                                <td data-title="Start Date"><a href="<?= $url ?>">06 Sep 2020</td></a>
-                                <td data-title="Last Modification"><a href="<?= $url ?>"><?= $project->lastModified ?></td></a>
-                                <td data-title="Languages"><a href="<?= $url ?>"><?= $project->languages ?></td></a>
-                                <td data-title="Status"><a href="<?= $url ?>">
-                                        <span class="status <?= $status = ($project->status === 'finished') ? 'desactive' : 'active' ?>"></span>
-                                        <?= $project->status ?>
-                                </td></a>
+                                <td>Id</td>
+                                <td>Project Name</td>
+                                <td>Start Date</td>
+                                <td>Last modification</td>
+                                <td>Languages</td>
+                                <td>Status</td>
                             </tr>
-                        <?php }
-                        ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach ($projects->getProjects() as $project) {
+                                $url = $router->url('editProject', ['id' => $project->id]);
+                            ?>
+                                <tr>
+                                    <td><a href="<?= $url ?>"><input type="checkbox" name="edit[]" value="<?=$project->id?>"></a></td>
+                                    <td data-title="Project Name"><a href="<?= $url ?>"><?= $project->title ?> <span class="error italic"><?= $draft = ($project->publish) ? '' : '[ Draft ]' ?></span></td></a>
+                                    <td data-title="Start Date"><a href="<?= $url ?>">06 Sep 2020</td></a>
+                                    <td data-title="Last Modification"><a href="<?= $url ?>"><?= $project->lastModified ?></td></a>
+                                    <td data-title="Languages"><a href="<?= $url ?>"><?= $project->languages ?></td></a>
+                                    <td data-title="Status"><a href="<?= $url ?>">
+                                            <span class="status <?= $status = ($project->status === 'finished') ? 'desactive' : 'active' ?>"></span>
+                                            <?= $project->status ?>
+                                    </td></a>
+                                </tr>
+                            <?php }
+                            ?>
+                        </tbody>
+                    </table>
+                    <div class="panel__footer">
+                        <button class="btn btn-danger no-margin" type="submit" name="editProjects">Delete</button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
