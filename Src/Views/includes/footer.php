@@ -2,7 +2,7 @@
     <ul>
         <li>
             <i class="fa fa-github"></i>
-            <a href="https://github.com/alex-robert-fr/">alex-robert-fr</a>
+            <a href="https://github.com/alex-robert-fr/" target="_blank">alex-robert-fr</a>
         </li>
 
         <li>

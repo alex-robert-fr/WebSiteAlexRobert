@@ -106,10 +106,10 @@
 		<h1>Où me retrouver ?</h1>
 		<ul>
 			<li>
-				<a href="https://www.malt.fr/profile/alexrobert">Malt.fr<i class="fa fa-chevron-right"></i></a>
+				<a href="https://www.malt.fr/profile/alexrobert" target="_blank">Malt.fr<i class="fa fa-chevron-right"></i></a>
 			</li>
 			<li>
-				<a href="https://www.codeur.com/-alexrobert">Codeur.com<i class="fa fa-chevron-right"></i></a>
+				<a href="https://www.codeur.com/-alexrobert" target="_blank">Codeur.com<i class="fa fa-chevron-right"></i></a>
 			</li>
 		</ul>
 	</section>
