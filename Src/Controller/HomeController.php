@@ -2,7 +2,6 @@
 
 namespace App\Src\Controller;
 
-use App\Extensions\Admin\Ext_data\Counter;
 use App\Extensions\Admin\Ext_projects\Projects;
 use App\Extensions\Json\jsonText;
 
@@ -11,7 +10,6 @@ class HomeController
     public function show()
     {
         global $router;
-        $counter = new Counter();
         $projects = new Projects();
         $json = new jsonText('/Config/projects.json');
         $json = $json->jsonObject;
