@@ -101,6 +101,23 @@
 
 
 
+	<!-- SITES -->
+	<section class="sites">
+		<h1>Où me retrouver ?</h1>
+		<ul>
+			<li>
+				<a href="https://www.malt.fr/profile/alexrobert" target="_blank">Malt.fr<i class="fa fa-chevron-right"></i></a>
+			</li>
+			<li>
+				<a href="https://www.codeur.com/-alexrobert" target="_blank">Codeur.com<i class="fa fa-chevron-right"></i></a>
+			</li>
+		</ul>
+	</section>
+
+
+
+
+
     <!-- PROJECT -->
     <section class="project">
         <h1>Mes projets</h1>
@@ -151,7 +168,7 @@
 
     <!-- FOOTER -->
     <section class="contact" id="contact">
-        <h1>Nous contacter</h1>
+        <h1>Me contacter</h1>
         <form action="#contact" method="post">
             <label for="lastname">Nom
                 <input type="text" name="lastname" id="lastname">
