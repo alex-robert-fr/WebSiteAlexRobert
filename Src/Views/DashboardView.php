@@ -17,7 +17,7 @@
         <div class="cards">
             <div class="card-single">
                 <div>
-                    <h1><?= $countAllView->getViews() ?></h1>
+                    <h1>0</h1>
                     <span>Views</span>
                 </div>
                 <div>
@@ -37,7 +37,7 @@
 
             <div class="card-single">
                 <div>
-                    <h1><?=$countAllView->getUniquesViewers()?></h1>
+                    <h1>0</h1>
                     <span>Uniques Viewers</span>
                 </div>
                 <div>

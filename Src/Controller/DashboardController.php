@@ -2,7 +2,6 @@
 
 namespace App\Src\Controller;
 
-use App\Extensions\Admin\Ext_data\Counter;
 use App\Extensions\Admin\Ext_projects\Projects;
 
 class DashboardController
@@ -11,7 +10,6 @@ class DashboardController
     {
         global $router;
         if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION['admin']) && $_SESSION['admin']) {
-            $countAllView = new Counter(false);
             $projects = new Projects();
             require_once __DIR__ . '/../Views/DashboardView.php';
         } else {
