@@ -1,2 +1,4 @@
 /vendor/
 Config/views.json
+Config/serv-config.php
+composer.json
